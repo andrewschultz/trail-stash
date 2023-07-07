@@ -9,11 +9,35 @@ Trail Stash
   "start": "Start"
 }
 
+:: Garbage
+
 :: StoryInit
 
-<<set $x = [ '1', '2' ]>>
-<<set $links = { 'Rm1': ['Rm1,recurse,looped already', 'Rm2,go there,been there already'] }>>
-<<set $solved = { 'Rm1': false }>>
+<<set $roomInfo to {}>>
+
+<<set $roomInfo['Start'] to {
+  exits: [ ['Rm1', 'get started', 'got started'], ['Rm2', 'go there', 'took care of Rm2'], ["Blighter's Rock", 'to the rock', 'solved the rock'] ],
+  solved: false
+  }
+>>
+<<set $roomInfo["Blighter's Rock"] to {
+  exits: [ ['Start', 'back to start', 'start done'] ],
+  solved: false
+  }
+>>
+<<set $roomInfo["Rm1"] to {
+  exits: [ ],
+  solved: false
+  }
+>>
+<<set $roomInfo["Rm2"] to {
+  exits: [ ],
+  solved: false
+  }
+>>
+
+<<set $solved = { 'Start': false, 'Rm1': false, 'Rm2': false, "Blighter's Rock": false}>>
+
 <<set $xx = 'a/b/c'.split('/')>>
 <<set $hardmode=false>>
 
@@ -27,16 +51,18 @@ Trail Stash
 <</widget>>
 
 <<widget "showlinks">>
+  <center>
   <<set _y=passage()>>
-  <<for _i = 0; _i < $links[_y].length; _i++>>
+  <<for _i = 0; _i < $roomInfo[_y].exits.length; _i++>>
 	<<if _i > 0>> | <</if>>
-    <<set _this = $links[_y][_i].split(',')>>
-	<<if $solved[_this[0]] == true>>
+    <<set _this = $roomInfo[_y].exits[_i]>>
+	<<if $roomInfo[_y].solved == true>>
 	  (_this[2])
 	<<else>>
 	  [[_this[1]|_this[0]]]
 	<</if>>
   <</for>>
+  </center>
 <</widget>>
 
 :: StoryMenu [StoryMenu]
@@ -68,9 +94,7 @@ Trail Stash
 :: Start
 
 This is a biddings quest.
-[[Left|Rm1]]
-[[Back|Blighter's Rock]]
-[[Right|Rm2]]
+<<showlinks>>
 
 :: Rm1
 
@@ -95,7 +119,7 @@ $solved["Blighter's Rock"]
 <<if $solved["Blighter's Rock"] == false>><<link [[Solve this|Blighter's Rock]]>><<solvethis>><</link>><<else>>You solved this.<</if>> using widgets, or trying to
 <<if $solved["Blighter's Rock"] == false>>[[Solve this|Blighter's Rock][$solved["Blighter's Rock"] = true]]<<else>>You solved this.<</if>> by hand
 
-[[Rm1]]
+<<showlinks>>
 
 :: RobBlind
 
