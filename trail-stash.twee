@@ -1,0 +1,57 @@
+:: StoryTitle
+Trail Stash
+
+:: StoryData
+{
+  "ifid": "0570A44F-5C6D-4A2A-9482-40658C61E3A9",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryInit
+
+<<set $x = [ '1', '2' ]>>
+<<set $links = { 'Rm1': ['Rm1,recurse,looped already', 'Rm2,go there,been there already'] }>>
+<<set $solved = { 'Rm1': false }>>
+<<set $xx = 'a/b/c'.split('/')>>
+
+:: Story Widgets [widget nobr]
+<<widget "thispassage">>
+<<=passage()>>
+<</widget>>
+
+<<widget "solvethis">>
+<<set $solved[passage()] = true>>
+<</widget>>
+
+<<widget "showlinks">>
+  <<set _y=passage()>>
+  <<for _i = 0; _i < $links[_y].length; _i++>>
+	<<if _i > 0>> | <</if>>
+    <<set _this = $links[_y][_i].split(',')>>
+	<<if $solved[_this[0]] == true>>
+	  (_this[2])
+	<<else>>
+	  [[_this[1]|_this[0]]]
+	<</if>>
+  <</for>>
+<</widget>>
+
+:: Start
+
+This is a biddings quest.
+[[Left|Rm1]]
+[[Right|Rm2]]
+
+:: Rm1
+
+<<showlinks>>
+Before solved above
+<<solvethis>>
+After solved below
+<<showlinks>>
+
+:: Rm2
+
+<<thispassage>>
