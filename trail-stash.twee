@@ -42,6 +42,7 @@ Trail Stash
 
 This is a biddings quest.
 [[Left|Rm1]]
+[[Back|Blighter's Rock]]
 [[Right|Rm2]]
 
 :: Rm1
@@ -57,6 +58,17 @@ After solved below
 :: Rm2
 
 <<thispassage>>
+
+:: Blighter's Rock
+
+This simply tests solvedness of a room. For now.
+
+$solved["Blighter's Rock"]
+
+<<if $solved["Blighter's Rock"] == false>><<link [[Solve this|Blighter's Rock]]>><<solvethis>><</link>><<else>>You solved this.<</if>> using widgets, or trying to
+<<if $solved["Blighter's Rock"] == false>>[[Solve this|Blighter's Rock][$solved["Blighter's Rock"] = true]]<<else>>You solved this.<</if>> by hand
+
+[[Rm1]]
 
 :: RobBlind
 
