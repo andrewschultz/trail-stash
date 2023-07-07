@@ -53,6 +53,18 @@ Trail Stash
 	<<replace "#dif">>_hm<</replace>>
 <</link>>
 
+<<set $oldpsg=passage()>>
+
+[[Inventory]]
+
+::Inventory
+
+[[As you were|$oldpsg]]
+
+:: PassageHeader
+
+<center><<nobr>><<=passage()>> $solved['Rm1']<</nobr>></center>
+
 :: Start
 
 This is a biddings quest.
