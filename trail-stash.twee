@@ -15,6 +15,7 @@ Trail Stash
 <<set $links = { 'Rm1': ['Rm1,recurse,looped already', 'Rm2,go there,been there already'] }>>
 <<set $solved = { 'Rm1': false }>>
 <<set $xx = 'a/b/c'.split('/')>>
+<<set $hardmode=false>>
 
 :: Story Widgets [widget nobr]
 <<widget "thispassage">>
@@ -37,6 +38,20 @@ Trail Stash
 	<</if>>
   <</for>>
 <</widget>>
+
+:: StoryMenu [StoryMenu]
+
+<<set $hm to 'Hard mode, click for easy'>>
+<<if $hardmode == false>><<set $hm to 'Easy mode, click for hard'>><</if>>
+
+<<set _labels to ['Easy mode, click for hard', 'Hard mode, click for easy']>>
+<<set _hm to _labels[Number($hardmode)]>>
+
+<<link "<span id='dif'>_hm</span>">>
+	<<set $hardmode to not $hardmode>>
+    <<set _hm to _labels[Number($hardmode)]>>
+	<<replace "#dif">>_hm<</replace>>
+<</link>>
 
 :: Start
 
