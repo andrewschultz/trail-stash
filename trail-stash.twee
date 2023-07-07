@@ -46,6 +46,8 @@ This is a biddings quest.
 
 :: Rm1
 
+A blob rind lies here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[take it|RobBlind]]
+
 <<showlinks>>
 Before solved above
 <<solvethis>>
@@ -55,3 +57,7 @@ After solved below
 :: Rm2
 
 <<thispassage>>
+
+:: RobBlind
+
+Unsurprisingly, the blob rind swells up to several times its original side in order to, uh, rob you blind. It only enveloped your belongings, not you, but you're so embarrassed by the experience, you give up. Or, you know, you can undo.
