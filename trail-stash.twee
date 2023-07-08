@@ -101,6 +101,53 @@ Trail Stash
   </center>
 <</widget>>
 
+<<widget "roomto">>
+  <<set _in=passage()>>
+  <<set _my_array = $roomInfo[_in].exits[$args[0]]>>
+  <<set _out = _my_array[0]>>
+  <<set $traversed = [ _in ]>>
+  <<set $toTraverse = [ _out ]>>
+  <<set $canTraverse = true>>
+  <<set $foundUnsolved = false>>
+  <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved); _i++>>
+    <<set $canTraverse = false>>
+	$canTraverse $foundUnsolved
+    <<for _j = 0; (_j < $toTraverse.length) and (not $foundUnsolved); _j++>>
+	  <<if $roomInfo[$toTraverse[_j]].solved == false >>
+	    <<set $foundUnsolved = true>>
+	  <<else>>
+	    <<for _k = 0; _k < $roomInfo[$toTraverse[_j]].exits.length; _k++>>
+		  <<set _this = $roomInfo[$toTraverse[_j]].exits[_k][0]>>
+		  <<if not $traversed.includes(_this) and not $toTraverse.includes(_this)>>
+		    <<run $toTraverse.push(_this)>>
+	      <</if>>
+	    <</for>>
+	  <</if>>
+	<</for>>
+  <</for>>
+  <<if $foundUnsolved>>
+	  [[_my_array[1]|_my_array[0]]]
+	<<else>>
+	  (_my_array[2])
+  <</if>>
+<</widget>>
+
+<<widget "solvesearch">>
+  <center>
+  <<if def $roomInfo[_y]>>
+    <<set _y=passage()>>
+    <<for _a = 0; _a < $roomInfo[_y].exits.length; _a++>>
+      <<if _a > 0>>|<</if>>
+      <<roomto _a>>
+    <</for>>
+  <<elseif _y == "Inventory">>
+    [[As you were|$oldpsg]]
+  <<else>>
+  (likely dead end/death trap--just undo
+  <</if>>
+  </center>
+<</widget>>
+
 :: StoryMenu [StoryMenu]
 
 <<set $hm to 'Hard mode, click for easy'>>
