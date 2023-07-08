@@ -109,9 +109,8 @@ Trail Stash
   <<set $toTraverse = [ _out ]>>
   <<set $canTraverse = true>>
   <<set $foundUnsolved = false>>
-  <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved); _i++>>
+  <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved) and (not $hardmode); _i++>>
     <<set $canTraverse = false>>
-	$canTraverse $foundUnsolved
     <<for _j = 0; (_j < $toTraverse.length) and (not $foundUnsolved); _j++>>
 	  <<if $roomInfo[$toTraverse[_j]].solved == false >>
 	    <<set $foundUnsolved = true>>
@@ -125,7 +124,7 @@ Trail Stash
 	  <</if>>
 	<</for>>
   <</for>>
-  <<if $foundUnsolved>>
+  <<if $foundUnsolved or $hardmode>>
 	  [[_my_array[1]|_my_array[0]]]
 	<<else>>
 	  (_my_array[2])
