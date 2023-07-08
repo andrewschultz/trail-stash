@@ -6,7 +6,7 @@ Trail Stash
   "ifid": "0570A44F-5C6D-4A2A-9482-40658C61E3A9",
   "format": "SugarCube",
   "format-version": "2.30.0",
-  "start": "Start"
+  "start": "Hizzy, Bub"
 }
 
 :: Garbage
@@ -15,32 +15,32 @@ Trail Stash
 
 <<set $roomInfo to {}>>
 
-<<set $roomInfo['Start'] to {
+<<set $roomInfo['Hizzy, Bub'] to {
   exits: [ ['Rm1', 'get started', 'got started'], ['Rm2', 'go there', 'took care of Rm2'], ["Blighter's Rock", 'to the rock', 'solved the rock'] ],
   solved: false,
-  solvedname: 'Start (done)'
+  solvedname: 'Busy Hub'
   }
 >>
 <<set $roomInfo["Blighter's Rock"] to {
-  exits: [ ['Start', 'back to start', 'start done'] ],
+  exits: [ ['Hizzy, Bub', 'back to start', 'start done'] ],
   solved: false,
   solvedname: "Writer's Block"
   }
 >>
 <<set $roomInfo["Rm1"] to {
-  exits: [ ['Start', 'back to start', 'start done'] ],
+  exits: [ ['Hizzy, Bub', 'back to start', 'start done'] ],
   solved: false,
   solvedname: 'XXX'
   }
 >>
 <<set $roomInfo["Rm2"] to {
-  exits: [ ['Start', 'back to start', 'start done'] ],
+  exits: [ ['Hizzy, Bub', 'back to start', 'start done'] ],
   solved: false,
   solvedname: 'XXX'
   }
 >>
 
-<<set $solved = { 'Start': false, 'Rm1': false, 'Rm2': false, "Blighter's Rock": false}>>
+<<set $solved = { 'Hizzy, Bub': false, 'Rm1': false, 'Rm2': false, "Blighter's Rock": false}>>
 
 <<set $xx = 'a/b/c'.split('/')>>
 <<set $hardmode=false>>
@@ -95,9 +95,9 @@ Trail Stash
 
 <center><<nobr>><<set _y=passage()>><<if def $roomInfo[_y].solvedname and $roomInfo[_y].solved is true>><<print $roomInfo[_y].solvedname>><<else>>_y<</if>><</nobr>></center>
 
-:: Start
+:: Hizzy, Bub
 
-This is a biddings quest.
+You are outside your hizzy, bub. It's better than being a hoarder, bub. I guess. (Border hub?!)
 
 <<showlinks>>
 
