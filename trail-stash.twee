@@ -6,7 +6,7 @@ Trail Stash
   "ifid": "0570A44F-5C6D-4A2A-9482-40658C61E3A9",
   "format": "SugarCube",
   "format-version": "2.30.0",
-  "start": "Ganging Hate"
+  "start": "Funny Mound"
 }
 
 :: Garbage / Backup Code
@@ -26,6 +26,8 @@ Trail Stash
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
   exits: [ ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed the Feeling Diner)'], ],
+  todo: "There's a funny mound here that seems to be covering passage elsewhere.",
+  done: "With money found here, passages outward have expanded.",
   available: true,
   solved: false,
   looted: false,
@@ -34,6 +36,8 @@ Trail Stash
 >>
 <<set $roomInfo['Small Isles'] to {
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Drunk Shore', 'to a Drunk Shore', '(Drunk Shore solved)'], ['Wash Pit', 'to the Wash Pit', '(cleaned up the Wash Pit)'], ['Feast Lake', 'to a feast lake', '(made Feast Lake nicer)'] ],
+  todo: "In these small isles, people guess they seem content. They don't see any way to get less unhappy. Everything's as good as it can get, and it's okay, they guess.",
+  done:	"Perhaps things aren't perfect here, but you boosted things nicely.",
   available: true,
   solved: false,
   looted: false,
@@ -42,6 +46,8 @@ Trail Stash
 >>
 <<set $roomInfo['Ganging Hate'] to {
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Yacking Hard', 'to yacking hard', '(Yacking Hard resolved)'], ['Plaid Base', 'to Plaid Base', '(Plaid Base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
+  todo: "You feel a hunger-induced dislike of anything and everything here.",
+  done: "You've managed to make a way through. The hanging gate looks rather beautiful and barely reminds you of previous hostilities.",
   available: true,
   solved: false,
   looted: false,
@@ -50,6 +56,8 @@ Trail Stash
 >>
 <<set $roomInfo['Veering Choice'] to {
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Brainy Zoo', 'to a Brainy Zoo', '(Brainy Zoo fed)'] ],
+  todo: "You sense there are possibilities just out of reach, if you knew how to access them.",
+  done: "A cheering voice in the background helps you feel you can and will look through other possibilities.",
   available: true,
   solved: false,
   looted: false,
@@ -60,6 +68,8 @@ Trail Stash
 /% sector 1 %/
 <<set $roomInfo['Harming Fights'] to {
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  todo: "Ugh! People here are squabbling about anything and everything. Boy, they think, if they get the right weapons, it'd really be on!<p />Perhaps you can slip them something bogus to get their hopes up and discourage such nonsense.",
+  done: "Whines for peace have supplanted war cries, and the people who once fought work together to, like, grow stuff. You just hope they share the profits equally.",
   available: false,
   solved: false,
   looted: false,
@@ -68,6 +78,8 @@ Trail Stash
 >>
 <<set $roomInfo['Weedy Nerds'] to {
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  todo: "Weedy nerds mill about here, posing about how much they know, but perhaps not being well-rounded enough.",
+  done: "The ex-weedy nerds will never be jocks and wouldn't want to be--they wouldn't be true to themselves--but they're ",
   available: false,
   solved: false,
   looted: false,
@@ -76,6 +88,8 @@ Trail Stash
 >>
 <<set $roomInfo['Feeling Diner'] to {
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  todo: "People mope about here, eating bland food, bemoaning bland lives.",
+  done: "With a more exciting array of foods, people are enjoying their meals here more.",
   available: false,
   solved: false,
   looted: false,
@@ -86,6 +100,8 @@ Trail Stash
 /% sector 2 %/
 <<set $roomInfo['Wash Pit'] to {
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
+  todo: "Here people come to be washed free of seemingly lower-class stuff that isn't that bad. Existential despair!",
+  done: "The posh wit here is more intellectually high-class than social.",
   available: false,
   solved: false,
   looted: false,
@@ -94,6 +110,8 @@ Trail Stash
 >>
 <<set $roomInfo['Drunk Shore'] to {
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
+  todo: "You feel a bit loopy from the fumes of what seems to be a lake. You're not sure. But it also feels sluggish. Maybe the right chemical reaction could uncover something underneath.",
+  done: "There's nothing more behind the shrunk door. But it smells and looks nicer than the alcohol fumes.",
   available: false,
   solved: false,
   looted: false,
@@ -102,6 +120,8 @@ Trail Stash
 >>
 <<set $roomInfo['Feast Lake'] to {
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
+  todo: "People eat guiltily here, wondering if they really deserve such a nice meal, maybe hoping for someone to compare themselves to so they don't feel so bad.",
+  done: "People eat and chat away happily, admitting their faults without being too proud of them.",
   available: false,
   solved: false,
   looted: false,
@@ -113,6 +133,8 @@ Trail Stash
 
 <<set $roomInfo['Peer Class'] to {
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  todo: "All manner of instruction is going on, but alas, some peers appear to be fraudulent. If only you had something that could detect frauds.",
+  done: "The level of discussion in this educational circle is beyond you, but hey, you got your map piece.",
   available: false,
   solved: false,
   looted: false,
@@ -121,6 +143,8 @@ Trail Stash
 >>
 <<set $roomInfo['Blighters Rock'] to {
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  todo: "Everyone here bemoans their lot in life, that they were meant for more than the nine-to-five. They could use a pick-me-up.",
+  done: "Fortunately, this is more a block of writers than people moaning about writers' block. They don't need to be disturbed now.",
   available: false,
   solved: false,
   looted: false,
@@ -129,6 +153,8 @@ Trail Stash
 >>
 <<set $roomInfo['Brainy Zoo'] to {
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  todo: "Some very smart animals potter around here looking for stimulation and nourishment.",
+  done: "The animals used what they found from the snide tracks to produce a business selling zany brew.",
   available: false,
   solved: false,
   looted: false,
@@ -140,6 +166,8 @@ Trail Stash
 
 <<set $roomInfo['Yacking Hard'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
+  todo: "There's lots of useless chatter around here, none of it particularly productive, mostly people who are bragging about how smart they are.",
+  done: "Inspired by seeing the tech chip you provided, people now search for knowledge here.",
   available: false,
   solved: false,
   looted: false,
@@ -148,14 +176,18 @@ Trail Stash
 >>
 <<set $roomInfo['Plaid Base'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
+  todo: "The plaid base here isn't just tacky, trust me on this one. It should be destroyed. Don't worry, there's nobody inside. Evil is lazy that way.",
+  done: "The remains of the plaid base are a place you still don't want to stay, but at least it's less intimidating.",
   available: false,
   solved: false,
   looted: false,
-  solvedname: "(ex-)Bad Place"
+  solvedname: "Bad Place"
   }
 >>
 <<set $roomInfo['Rusty Fiddlers'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
+  todo: "Rusty fiddlers make bad music here. They look as if they could use something to give them a boost. Maybe not a temporarily and healthy boost, but a boost.",
+  done: "The fusty riddlers go on about all manner of riddles, abstract or requiring specific language. At least they're having fun.",
   available: false,
   solved: false,
   looted: false,
@@ -167,6 +199,8 @@ Trail Stash
 
 <<set $roomInfo['Bay Hut'] to {
   exits: [ ],
+  todo: "N/A",
+  done: "N/A",
   available: false,
   solved: false,
   looted: false,
@@ -488,6 +522,11 @@ Trail Stash
   <</if>>
 <</widget>>
 
+<<widget "roomstuff">>
+  <<set $roomstuff=$roomInfo[passage()]>>
+  <<if $roomstuff.solved == false>>$roomstuff.todo<<else>>$roomstuff.done<</if>>
+<</widget>>
+
 /% <<set $roomInfo[$itemInfo[$useitem].reveals[_b]].available = true>> %/
 
 :: StoryMenu [StoryMenu]
@@ -528,39 +567,69 @@ Trail Stash
 
 :: Funny Mound
 
-<<if $roomInfo["Funny Mound"].solved == false>>There's a funny mound here that seems to be covering passage elsewhere.<<else>>With money found here, passages expanded.<</if>>
+<<roomstuff>>
 
-A blob rind lies here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[inspect it|Rob Blind]].
+Also, a blob rind lies here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[inspect it|Rob Blind]].
 
 :: Harming Fights
 
+<<roomstuff>>
+
 :: Weedy Nerds
+
+<<roomstuff>>
 
 :: Feeling Diner
 
+<<roomstuff>>
+
 :: Small Isles
+
+<<roomstuff>>
 
 :: Drunk Shore
 
+<<roomstuff>>
+
 :: Wash Pit
+
+<<roomstuff>>
 
 :: Feast Lake
 
+<<roomstuff>>
+
 :: Ganging Hate
+
+<<roomstuff>>
 
 :: Yacking Hard
 
+<<roomstuff>>
+
 :: Plaid Base
+
+<<roomstuff>>
 
 :: Rusty Fiddlers
 
+<<roomstuff>>
+
 :: Veering Choice
+
+<<roomstuff>>
 
 :: Blighters Rock
 
+<<roomstuff>>
+
 :: Brainy Zoo
 
+<<roomstuff>>
+
 :: Peer Class
+
+<<roomstuff>>
 
 :: Bay Hut
 
