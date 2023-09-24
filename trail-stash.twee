@@ -63,7 +63,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Posh Wit"
+  solvedname: "Farming Heights"
   }
 >>
 <<set $roomInfo['Weedy Nerds'] to {
@@ -116,7 +116,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Posh Wit"
+  solvedname: "Clear Pass"
   }
 >>
 <<set $roomInfo['Blighters Rock'] to {
@@ -124,7 +124,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Shrunk Door"
+  solvedname: "Writers' Block"
   }
 >>
 <<set $roomInfo['Brainy Zoo'] to {
@@ -132,7 +132,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Least Fake"
+  solvedname: "Zany Brew"
   }
 >>
 
@@ -143,7 +143,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Posh Wit"
+  solvedname: "Hacking Yard"
   }
 >>
 <<set $roomInfo['Plaid Base'] to {
@@ -151,7 +151,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Shrunk Door"
+  solvedname: "(ex-)Bad Place"
   }
 >>
 <<set $roomInfo['Rusty Fiddlers'] to {
@@ -159,7 +159,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Least Fake"
+  solvedname: "Fusty Riddlers"
   }
 >>
 
