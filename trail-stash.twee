@@ -453,7 +453,7 @@ Trail Stash
         <<roomto _a>>
 	  <</if>>
     <</for>>
-  <<elseif _y == "Inventory" or _y == "UsePage">>
+  <<elseif _y == "Inventory" or _y == "UsePage" or _y == "Credits" or _y == "About">>
     [[As you were|$oldpsg]]
   <<else>>
   <font color=green>(likely dead end/death trap--just undo in the left column!)</font>
@@ -531,10 +531,7 @@ Trail Stash
 
 :: StoryMenu [StoryMenu]
 
-<<set $hm to 'Hard mode, click for easy'>>
-<<if $hardmode == false>><<set $hm to 'Easy mode, click for hard'>><</if>>
-
-<<set _labels to ['Easy mode, click for hard', 'Hard mode, click for easy']>>
+<<set _labels to ['Completed areas <b>BLOCKED</b>. Click to unblock.', 'Completed areas <b>UNBLOCKED</b>. Click to block.']>>
 <<set _hm to _labels[Number($hardmode)]>>
 
 <<link "<span id='dif'>_hm</span>">>
@@ -543,9 +540,31 @@ Trail Stash
 	<<replace "#dif">>_hm<</replace>>
 <</link>>
 
-<<if passage()!="UsePage" and passage()!="Inventory">><<set $oldpsg=passage()>><</if>>
+<<if passage()!="UsePage" and passage()!="Inventory" and passage()!="Credits" and passage()!="About">><<set $oldpsg=passage()>><</if>>
 
 [[Inventory]]
+
+[[About]]
+
+[[Credits]]
+
+::About
+
+The technical part for <i>Trail Stash</i> was roughly conceived in April 2023, during Spring Thing. After playing Leon Lin's <i>Insomnia</i>, which branched to 26 different endings and had some buffer against visiting the same one twice, I wondered--what about blocking off passages in Twine where they, and the rooms behind them, were done? I'd done so with parser games, first with <i>Ailihphilia</i>, but there it was a bit of a cheat, because the map had no loops. You had rooms with only one path in to the center room. So you could just search through all the out directions! Then, with <i>Low-Key Learny Jokey Journey</i>, I made something more robust and general. But Inform makes it easier to search rooms with directions, due to room properties etc.
+
+So what about Twine? It presented a new and interesting challenge, but it was eminently doable. I build up the code in July or so, then raced near the end of September, looking through my big file of spoonerisms. In a way, it was nice to limit myself to few rooms with so little time left. I didn't have time to create the fully complex world, but I built one which I think shows a technical proof of concept, and it's less likely the joke will get old.
+
+The game is not meant to be deep. There are sixteen rooms in a symmetrical map. There is an inner ring of four rooms, and each room leads out to three more. I originally said "Well, you could just determine where to go based on if there were any passages" but then that led to odd situations where you didn't get the four inner rooms closed off soon enough. So I added the ignore-immediate-passage property to make things more exact.
+
+The creative part for <i>Trail Stash</i> started a while ago, because I always enjoyed spoonerisms (who doesn't?) but for parser games, there wasn't much of a puzzle to figure out spoonerisms, so it didn't seem like I could string much together, or I couldn't do it as well as <i>Nord and Bert Couldn't Make Head or Tail of It</i>. With Twine, though, hopefully the double meanings will provide chuckles before things get too, um, stale. I needed ones that roughly made sense and matched each way they were flipped. I hope you enjoy the result and it encourages you to try your own odd experiments.
+
+::Credits
+
+Twinery.org was a huge help for so much, both the cookbook and the people who asked questions so I didn't have to. Some of them, I looked up the question more than once, because I forgot.
+
+Thanks to all past and current IFComp organizers. Thanks to you for taking the time to play this, and extra thanks if you find the time to judge and/or write reviews. There will be a lot more substantial games out there than this. They are worth seeing. Some may, too, be one-trick ponies like <i>Trail Stash</i>, but they may be a trick you like. Explore around and enjoy as much as you can.
+
+((BETA TESTERS HERE))
 
 ::Inventory
 
@@ -559,7 +578,7 @@ Trail Stash
 
 :: PassageHeader
 
-<center><<nobr>><font size=+2 color=yellow><<set _y=passage()>><<if def $roomInfo[_y] and def $roomInfo[_y].solvedname and $roomInfo[_y].solved is true>><<print $roomInfo[_y].solvedname>><<else>>_y<</if>></font><<if _y is "Inventory">> (in $oldpsg) <</if>><</nobr>></center>
+<center><<nobr>><font size=+2 color=yellow><<set _y=passage()>><<if def $roomInfo[_y] and def $roomInfo[_y].solvedname and $roomInfo[_y].solved is true>><<print $roomInfo[_y].solvedname>><<else>>_y<</if>></font><<if _y is "Inventory">> (location: $oldpsg) <</if>><</nobr>></center>
 
 :: UsePage
 
