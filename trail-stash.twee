@@ -13,6 +13,9 @@ Trail Stash
 
 :: StoryInit
 
+/% todo: make intro screen with background %/
+/% todo: make a list of meta rooms so if-thens get cut down if $metarooms.contains("my_string") %/
+/% todo: ignore certain rooms to start e.g. 2 other ring rooms %/
 /% todo (for testing): condense SOLVETHIS if-statements (rm4-7) into a widget %/
 /% Hizzy Bub is place, Bed Hangars too, Bay Hut %/
 
@@ -517,8 +520,10 @@ Trail Stash
 	<<set $roomInfo['Bay Hut'].available = true>>
     <</if>>
   <</if>>
+  <<elseif $itemInfo[$useitem].initroom == $oldpsg>>
+  Hmm. You'd be surprised if you could use the $useitem right where you found it. You suspect someone already tried that. Somewhere else, maybe?
   <<else>>
-  Unfortunately, you can't see any way to use the $useitem here. It must be useful somewhere, though!
+  Unfortunately, you can't see any way to use the $useitem here. It must be useful somewhere, though! You hope so! You'd hate to have it weighing you down when you find the treasure!
   <</if>>
 <</widget>>
 
@@ -572,7 +577,7 @@ Thanks to all past and current IFComp organizers. Thanks to you for taking the t
 
 :: PassageFooter
 
-<center><<if passage=="wrong leads">><font size=+3>FUN, AIDING, UNFADING</font><<else>><<showitems>><</if>></center>
+<<if passage=="wrong leads">><center><font size=+3>FUN, AIDING, UNFADING</font></center><<else>><<showitems>><</if>>
 
 <<solvesearch>>
 
