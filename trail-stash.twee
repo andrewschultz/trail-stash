@@ -28,6 +28,7 @@ Trail Stash
   exits: [ ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed the Feeling Diner)'], ],
   available: true,
   solved: false,
+  looted: false,
   solvedname: 'Money Found'
   }
 >>
@@ -35,6 +36,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Drunk Shore', 'to a Drunk Shore', '(Drunk Shore solved)'], ['Wash Pit', 'to the Wash Pit', '(cleaned up the Wash Pit)'], ['Feast Lake', 'to a feast lake', '(made Feast Lake nicer)'] ],
   available: true,
   solved: false,
+  looted: false,
   solvedname: "All Smiles"
   }
 >>
@@ -42,6 +44,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Yacking Hard', 'to yacking hard', '(Yacking Hard resolved)'], ['Plaid Base', 'to Plaid Base', '(Plaid Base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
   available: true,
   solved: false,
+  looted: false,
   solvedname: "Hanging Gate"
   }
 >>
@@ -49,6 +52,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Brainy Zoo', 'to a Brainy Zoo', '(Brainy Zoo fed)'] ],
   available: true,
   solved: false,
+  looted: false,
   solvedname: "Cheering Voice"
   }
 >>
@@ -58,6 +62,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Posh Wit"
   }
 >>
@@ -65,6 +70,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Needy Words"
   }
 >>
@@ -72,6 +78,7 @@ Trail Stash
   exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Dealing Finer"
   }
 >>
@@ -81,6 +88,7 @@ Trail Stash
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Posh Wit"
   }
 >>
@@ -88,6 +96,7 @@ Trail Stash
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Shrunk Door"
   }
 >>
@@ -95,6 +104,7 @@ Trail Stash
   exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Least Fake"
   }
 >>
@@ -105,6 +115,7 @@ Trail Stash
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Posh Wit"
   }
 >>
@@ -112,6 +123,7 @@ Trail Stash
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Shrunk Door"
   }
 >>
@@ -119,6 +131,7 @@ Trail Stash
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Least Fake"
   }
 >>
@@ -129,6 +142,7 @@ Trail Stash
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Posh Wit"
   }
 >>
@@ -136,6 +150,7 @@ Trail Stash
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Shrunk Door"
   }
 >>
@@ -143,6 +158,7 @@ Trail Stash
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
   available: false,
   solved: false,
+  looted: false,
   solvedname: "Least Fake"
   }
 >>
@@ -357,7 +373,7 @@ Trail Stash
   <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved) and (not $hardmode); _i++>>
     <<set $canTraverse = false>>
     <<for _j = 0; (_j < $toTraverse.length) and (not $foundUnsolved); _j++>>
-	  <<if $roomInfo[$toTraverse[_j]].solved == false >>
+	  <<if $roomInfo[$toTraverse[_j]].solved == false or $roomInfo[$toTraverse[_j]].looted == false>>
 	    <<set $foundUnsolved = true>>
 	  <<else>>
 	    <<for _k = 0; _k < $roomInfo[$toTraverse[_j]].exits.length; _k++>>
@@ -400,6 +416,11 @@ Trail Stash
   </center>
 <</widget>>
 
+<<widget "takelink">>
+  <<set _psg=passage()>>
+  <br /><<print $itemInfo[$args[0]].description>> (<<link [[Take it|_psg]]>><<set $itemInfo[$args[0]].taken=true>><<set $inventory.push($args[0])>><<set $roomInfo[_psg].looted=true>><</link>>)
+<</widget>>
+
 <<widget "showitems">>
   <<set $any_items=false>>
   <<set _psg=passage()>>
@@ -408,8 +429,7 @@ Trail Stash
     <<set _ti=$tempitms[_a]>>
     <<if $itemInfo[_ti].taken == false>>
       <<if $itemInfo[_ti].initroom == _psg>>
-	    <<set _x=_ti>>
-        <br /><<print $itemInfo[_ti].description>> (<<link [[Take it|_psg]]>><<set $itemInfo[_x].taken=true>><<set $inventory.push(_x)>><</link>>)
+	    <<takelink _ti>>
 	  <</if>>
 	<</if>>
   <</for>>
