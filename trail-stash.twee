@@ -48,6 +48,50 @@ Trail Stash
   }
 >>
 
+<<set $itemInfo['Pert Door'] to {
+  initroom: 'Ganging Hate',
+  useroom: 'Funny Mound',
+  taken: false,
+  used: false,
+  description: "A pert door stands here on its own. Odd!",
+  success: "You place the pert door down. Somehow, it sinks into the Funny Mound, lowering it. You now have passage through.",
+  reveals: [ "Wash Pit", "Weedy Nerds", "Feeling Diner" ]
+}
+>>
+
+<<set $itemInfo['Hair Shirt'] to {
+  initroom: 'Funny Mound',
+  useroom: 'Small Isles',
+  taken: false,
+  used: false,
+  description: "A hair shirt lies here, disused and unloved. Odd!",
+  success: "You share hurt in your hair shirt. People realize they are not alone. It makes everyone happy.",
+  reveals: [ "Drunk Shower", "Harming Fights", "Feast Lake" ]
+}
+>>
+
+<<set $itemInfo['Hard Candy'] to {
+  initroom: 'Rusty Fiddlers',
+  useroom: 'Ganging Hate',
+  taken: false,
+  used: false,
+  description: "Some hard candy is here, still in its wrapper.",
+  success: "There's nothing like candy to dispel ganging hate! Even if it is not very good candy! As the ganging hate subsides, you notice other passages through.",
+  reveals: [ "Peer Class", "Blighters Rock", "Brainy Zoo" ]
+}
+>>
+
+<<set $itemInfo['Booze Cluster'] to {
+  initroom: 'Small Isles',
+  useroom: 'Rusty Fiddlers',
+  taken: false,
+  used: false,
+  description: "Some hard candy is here, still in its wrapper.",
+  success: "There's nothing like candy to dispel ganging hate! Even if it is not very good candy! As the ganging hate subsides, you notice other passages through.",
+  reveals: [ "Peer Class", "Blighters Rock", "Brainy Zoo" ]
+}
+>>
+
 <<set $hardmode=false>>
 
 :: Story Widgets [widget nobr]
@@ -120,6 +164,20 @@ Trail Stash
   </center>
 <</widget>>
 
+<<widget "showitems">>
+  <<set $any_items=false>>
+  <<set $psg=passage()>>
+  <<set $tempitms to Object.keys($itemInfo)>>
+  <<for _a = 0; _a < $tempitms.length; _a++>>
+    <<if $itemInfo[$tempitms[_a]].taken == false>>
+      <<if $itemInfo[$tempitms[_a]].initroom == $psg>>
+        <<print $itemInfo[$tempitms[_a]].description>>
+	  <</if>>
+	<</if>>
+  <</for>>
+
+<</widget>>
+
 :: StoryMenu [StoryMenu]
 
 <<set $hm to 'Hard mode, click for easy'>>
@@ -141,6 +199,8 @@ Trail Stash
 ::Inventory
 
 :: PassageFooter
+
+<<showitems>>
 
 <<solvesearch>>
 
