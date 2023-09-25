@@ -6,7 +6,7 @@ Trail Stash
   "ifid": "0570A44F-5C6D-4A2A-9482-40658C61E3A9",
   "format": "SugarCube",
   "format-version": "2.30.0",
-  "start": "Funny Mound"
+  "start": "Growing Need, Knowing Greed"
 }
 
 :: Garbage / Backup Code
@@ -15,7 +15,6 @@ Trail Stash
 
 /% todo: make intro screen with background %/
 /% todo: make a list of meta rooms so if-thens get cut down if $metarooms.contains("my_string") %/
-/% todo: ignore certain rooms to start e.g. 2 other ring rooms %/
 /% Hizzy Bub is place, Bed Hangars too %/
 
 <<set $roomInfo to {}>>
@@ -558,7 +557,7 @@ The technical part for <i>Trail Stash</i> was roughly conceived in April 2023, d
 
 So what about Twine? It presented a new and interesting challenge, but it was eminently doable. I build up the code in July or so, then raced near the end of September, looking through my big file of spoonerisms. In a way, it was nice to limit myself to few rooms with so little time left. I didn't have time to create the fully complex world, but I built one which I think shows a technical proof of concept, and it's less likely the joke will get old.
 
-The game is not meant to be deep. There are sixteen rooms in a symmetrical map. There is an inner ring of four rooms, and each room leads out to three more. I originally said "Well, you could just determine where to go based on if there were any passages" but then that led to odd situations where you didn't get the four inner rooms closed off soon enough. So I added the ignore-immediate-passage property to make things more exact.
+The game is not meant to be deep. There are sixteen rooms in a symmetrical map. There is an inner ring of four rooms, and each room leads out to three more. This kind of moots the example in some ways, since you don't see everything shut off until near the end--if there are two rooms in the inner ring with something to do, the whole inner ring is available. So perhaps this is best with a branching structure with more and longer dead ends. I originally planed each ring leading to two rooms, which led to two rooms, but that made too many rooms for the time I had. As-is, you get to see things at the end.
 
 The creative part for <i>Trail Stash</i> started a while ago, because I always enjoyed spoonerisms (who doesn't?) but for parser games, there wasn't much of a puzzle to figure out spoonerisms, so it didn't seem like I could string much together, or I couldn't do it as well as <i>Nord and Bert Couldn't Make Head or Tail of It</i>. With Twine, though, hopefully the double meanings will provide chuckles before things get too, um, stale. I needed ones that roughly made sense and matched each way they were flipped. I hope you enjoy the result and it encourages you to try your own odd experiments.
 
@@ -576,9 +575,9 @@ Thanks to all past and current IFComp organizers. Thanks to you for taking the t
 
 :: PassageFooter
 
-<<if passage=="wrong leads">><center><font size=+3>FUN, AIDING, UNFADING</font></center><<else>><<showitems>><</if>>
+<<set _tmppsg=passage()>><<if _tmppsg=="Wrong Leads">><center><font size=+3>FUN, AIDING, UNFADING</font></center><<elseif passage()=="Growing Need, Knowing Greed" or _tmppsg=="Weak Cell">><<else>><<showitems>>
 
-<<solvesearch>>
+<<solvesearch>><</if>>
 
 :: PassageHeader
 
@@ -588,11 +587,21 @@ Thanks to all past and current IFComp organizers. Thanks to you for taking the t
 
 <<usewidget>>
 
+:: Growing Need, Knowing Greed
+
+You heard legends of a valuable trail stash 'round these here parts. Of course you liked the idea of being rich. You balanced thoughts in your head: knowing greed? Growing need? Others sought to it, telling you "ought to sit." But you snuck out on your own, when you heard a voice calling "[[SEE DIRE DESIRE|Weak Cell]]."
+
+:: Weak Cell
+
+You were, of course, woefully unequipped. You fell into a trap and were sent to a weak cell. But ... for whatever reason, someone slid a note under your door. On the front it said: "WHINE? FEW! FINE! WHEW!" Then, on the back, SEEK WELL. Along with some other advice.
+
+A map split into twelve parts would lead to the treasure, and sadly, there wasn't one part with a big X, where you could clearly see it was in a corner, and thus not worry about the others. It was a really intricate maze, the sort that would give parser adventurers fits what with all these directions, but you -- well, you were right for this job. You walked out of the cell and [[wandered a bit to ...|Funny Mound]].
+
 :: Funny Mound
 
 <<roomstuff>>
 
-Also, a blob rind lies here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[inspect it|Rob Blind]].
+There's a very suspicious blob rind lying here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[inspect it|Rob Blind]].
 
 :: Harming Fights
 
@@ -668,4 +677,4 @@ Whichever. You're eager to go improve lives, and stuff. You kick a gold bowl out
 
 :: Rob Blind
 
-Oh, no! The blob rind swells up to several times its original side in order to, uh, rob you blind. It only enveloped your belongings, not you, but you're so embarrassed by the experience, you give up. Or, you know, you can undo.
+Oh, no! The blob rind swells up to several times its original side in order to, uh, rob you blind. It only enveloped your belongings, not you, but you're so embarrassed by the experience, you give up. Or, you know, you can just click the back arrow, slightly wiser for your experience.
