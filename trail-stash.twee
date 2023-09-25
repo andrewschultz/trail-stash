@@ -26,7 +26,7 @@ Trail Stash
 
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
-  exits: [ ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed the Feeling Diner)'], ],
+  exits: [ ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Cheering Voice', 'to a Cheering Voice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed the Feeling Diner)'], ],
   todo: "There's a funny mound here that seems to be covering passage elsewhere.",
   done: "With money found here, passages outward have expanded.",
   available: true,
@@ -46,7 +46,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Ganging Hate'] to {
-  exits: [ ['Veering Choice', 'to a Veering Choice', '(opened the veering choice)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Yacking Hard', 'to yacking hard', '(Yacking Hard resolved)'], ['Plaid Base', 'to Plaid Base', '(Plaid Base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
+  exits: [ ['Cheering Voice', 'to a Cheering Voice', '(opened the veering choice)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Yacking Hard', 'to yacking hard', '(Yacking Hard resolved)'], ['Plaid Base', 'to Plaid Base', '(Plaid Base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
   todo: "You feel a hunger-induced dislike of anything and everything here.",
   done: "You've managed to make a way through. The hanging gate looks rather beautiful and barely reminds you of previous hostilities.",
   available: true,
@@ -55,14 +55,14 @@ Trail Stash
   solvedname: "Hanging Gate"
   }
 >>
-<<set $roomInfo['Veering Choice'] to {
+<<set $roomInfo['Cheering Voice'] to {
   exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Zany Brew', 'to a Zany Brew', '(Zany Brew organized)'] ],
-  todo: "You sense there are possibilities just out of reach, if you knew how to access them.",
-  done: "A cheering voice in the background helps you feel you can and will look through other possibilities.",
+  todo: "A cheering voice is here, opening you to possibilities, but you just can't settle on any one.",
+  done: "The Quick Pest calmed you down enough to see a few concrete possibilities. You see paths beyond your starting inner ring now.",
   available: true,
   solved: false,
   looted: false,
-  solvedname: "Cheering Voice"
+  solvedname: "Veering Choice"
   }
 >>
 
@@ -133,7 +133,7 @@ Trail Stash
 /% sector 3 %/
 
 <<set $roomInfo['Peer Class'] to {
-  exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
   todo: "All manner of instruction is going on, but alas, some peers appear to be fraudulent. If only you had something that could detect frauds.",
   done: "The level of discussion in this educational circle is beyond you, but hey, you got your map piece.",
   available: false,
@@ -143,7 +143,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Blighters Rock'] to {
-  exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
   todo: "Everyone here bemoans their lot in life, that they were meant for more than the nine-to-five. They could use a pick-me-up.",
   done: "Fortunately, this is more a block of writers than people moaning about writers' block. They don't need to be disturbed now.",
   available: false,
@@ -153,7 +153,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Zany Brew'] to {
-  exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
+  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
   todo: "A wide menagerie of animals, ones you've seen before and ones you haven't, cycles around here, but it doesn't really feel like a home. They're not penned in, but it is too wide-open. They could use shelter.",
   done: "The animals here make up quite a brainy zoo, as they were clever enough to help you lift the dry tents which leave them more comfortable, rain or shine.",
   available: false,
@@ -235,7 +235,7 @@ Trail Stash
 
 <<set $itemInfo['Quick Pest'] to {
   initroom: 'Small Isles',
-  useroom: 'Veering Choice',
+  useroom: 'Cheering Voice',
   taken: false,
   map_piece: false,
   description: "A quick pest bounces back and forth here. It must get exhausted soon, right?",
@@ -245,7 +245,7 @@ Trail Stash
 >>
 
 <<set $itemInfo['Hard Candy'] to {
-  initroom: 'Veering Choice',
+  initroom: 'Cheering Voice',
   useroom: 'Ganging Hate',
   taken: false,
   map_piece: false,
@@ -647,7 +647,7 @@ There's a very suspicious blob rind lying here! You may be able to figure out wh
 
 <<roomstuff>>
 
-:: Veering Choice
+:: Cheering Voice
 
 <<roomstuff>>
 
