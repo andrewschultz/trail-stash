@@ -56,7 +56,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Veering Choice'] to {
-  exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Brainy Zoo', 'to a Brainy Zoo', '(Brainy Zoo fed)'] ],
+  exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Zany Brew', 'to a Zany Brew', '(Zany Brew organized)'] ],
   todo: "You sense there are possibilities just out of reach, if you knew how to access them.",
   done: "A cheering voice in the background helps you feel you can and will look through other possibilities.",
   available: true,
@@ -152,14 +152,14 @@ Trail Stash
   solvedname: "Writers' Block"
   }
 >>
-<<set $roomInfo['Brainy Zoo'] to {
+<<set $roomInfo['Zany Brew'] to {
   exits: [ ['Veering Choice', 'back to veering choice', '(Veering Choice mowered through)'] ],
-  todo: "Some very smart animals potter around here looking for stimulation and nourishment.",
-  done: "The animals used what they found from the snide tracks to produce a business selling zany brew.",
+  todo: "A wide menagerie of animals, ones you've seen before and ones you haven't, cycles around here, but it doesn't really feel like a home. They're not penned in, but it is too wide-open. They could use shelter.",
+  done: "The animals here make up quite a brainy zoo, as they were clever enough to help you lift the dry tents which leave them more comfortable, rain or shine.",
   available: false,
   solved: false,
   looted: false,
-  solvedname: "Zany Brew"
+  solvedname: "Brainy Zoo"
   }
 >>
 
@@ -240,7 +240,7 @@ Trail Stash
   map_piece: false,
   description: "A quick pest bounces back and forth here. It must get exhausted soon, right?",
   success: "The quick pest is ready to go again. It zips back and forth, destroying some bulwarks and opening three new passages.",
-  reveals: [ "Peer Class", "Blighters Rock", "Brainy Zoo" ]
+  reveals: [ "Peer Class", "Blighters Rock", "Zany Brew" ]
 }
 >>
 
@@ -305,13 +305,13 @@ Trail Stash
 }
 >> /% 2-1 %/
 
-<<set $itemInfo['Snide Tracks'] to {
+<<set $itemInfo['Tridents'] to {
   initroom: 'Wash Pit',
-  useroom: 'Brainy Zoo',
+  useroom: 'Zany Brew',
   taken: false,
   map_piece: true,
-  description: "Snide tracks lie here. You know, the music kind.",
-  success: "You feed the snide tracks to the denizens of the Brainy Zoo. Surprisingly, they digest them and have quite a lot to wash the food down with. They sit and ponder things unimaginable to humans, giving you a piece of a treasure map in gratitude.",
+  description: "A couple of tridents lie here, washed up from the deep, I guess. They look glowing and full of latent power. But not here.",
+  success: "You plant the tridents, and as they do, they grow to an enormous size. (Un)surprisingly, once you do, the animals uncover some dry tents and rope off to the side that were useless without anything to hold them up. A brief search reveals even more sticks and suck that support things. You are clueless with knots, but some animals some way, somehow, show you. Smart! They have a place to roam and see and be seen, in this open-range zoo.",
   reveals: [ ]
 }
 >> /% 2-3 %/
@@ -352,7 +352,7 @@ Trail Stash
 >> /% 3-2 %/
 
 <<set $itemInfo['Filed Wire'] to {
-  initroom: 'Brainy Zoo',
+  initroom: 'Zany Brew',
   useroom: 'Plaid Base',
   taken: false,
   map_piece: true,
@@ -655,7 +655,7 @@ There's a very suspicious blob rind lying here! You may be able to figure out wh
 
 <<roomstuff>>
 
-:: Brainy Zoo
+:: Zany Brew
 
 <<roomstuff>>
 
