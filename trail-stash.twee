@@ -26,8 +26,8 @@ Trail Stash
 
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
-  exits: [ ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Cheering Voice', 'to a Cheering Voice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed the Feeling Diner)'], ],
-  todo: "There's a funny mound here that seems to be covering passage elsewhere.",
+  exits: [ ['Small Isles', 'to some small isles', '(small isles solved)'], ['Cheering Voice', 'to a cheering voice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed Feeling Diner)'], ],
+  todo: "A funny mound here seems to be blocking any passages elsewhere.",
   done: "With money found here, passages outward have expanded.",
   available: true,
   solved: false,
@@ -36,7 +36,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Small Isles'] to {
-  exits: [ ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Drunk Shore', 'to a Drunk Shore', '(Drunk Shore solved)'], ['Wash Pit', 'to the Wash Pit', '(cleaned up the Wash Pit)'], ['Feast Lake', 'to a feast lake', '(made Feast Lake nicer)'] ],
+  exits: [ ['Ganging Hate', 'near some ganging hate', '(ganging hate repelled)'], ['Funny Mound', 'to a funny mound', '(funny mound solved)'], ['Drunk Shore', 'to a drunk shore', '(drunk shore solved)'], ['Wash Pit', 'to the wash pit', '(cleaned up the wash pit)'], ['Feast Lake', 'to a feast lake', '(made feast lake nicer)'] ],
   todo: "In these small isles, people guess they seem content. They don't see any way to get less unhappy. Everything's as good as it can get, and it's okay, they guess.",
   done:	"Perhaps things aren't perfect here, but you boosted things nicely.",
   available: true,
@@ -46,7 +46,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Ganging Hate'] to {
-  exits: [ ['Cheering Voice', 'to a Cheering Voice', '(opened the veering choice)'], ['Small Isles', 'to some small isles', '(Small Isles solved)'], ['Yacking Hard', 'to yacking hard', '(Yacking Hard resolved)'], ['Plaid Base', 'to Plaid Base', '(Plaid Base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
+  exits: [ ['Cheering Voice', 'to a cheering voice', '(opened the veering choice)'], ['Small Isles', 'to some small isles', '(small isles solved)'], ['Yacking Hard', 'to yacking hard', '(yacking hard resolved)'], ['Plaid Base', 'to Plaid Base', '(plaid base neutralized)'], ['Rusty Fiddlers', 'to rusty fiddlers', '(Rusty Fiddlers better occupied)'] ],
   todo: "You feel a hunger-induced dislike of anything and everything here.",
   done: "You've managed to make a way through. The hanging gate looks rather beautiful and barely reminds you of previous hostilities.",
   available: true,
@@ -56,9 +56,9 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Cheering Voice'] to {
-  exits: [ ['Funny Mound', 'to a funny mound', '(Funny Mound solved)'], ['Ganging Hate', 'near some ganging hate', '(Ganging Hate repelled)'], ['Peer Class', 'to a peer class', '(Peer Class solved)'], ['Blighters Rock', 'to Blighters Rock', '(Blighters Rock happified)'], ['Zany Brew', 'to a Zany Brew', '(Zany Brew organized)'] ],
+  exits: [ ['Funny Mound', 'to a funny mound', '(funny mound solved)'], ['Ganging Hate', 'near some ganging hate', '(ganging hate repelled)'], ['Peer Class', 'to a peer class', '(peer class solved)'], ["Blighters' Rock", "to Blighters' Rock", "(Blighters' Rock happified)"], ['Zany Brew', 'to a zany brew', '(zany brew organized)'] ],
   todo: "A cheering voice is here, opening you to possibilities, but you just can't settle on any one.",
-  done: "The Quick Pest calmed you down enough to see a few concrete possibilities. You see paths beyond your starting inner ring now.",
+  done: "The quick pest calmed you down enough to see a few concrete possibilities. You see paths beyond your starting inner ring now.",
   available: true,
   solved: false,
   looted: false,
@@ -68,9 +68,9 @@ Trail Stash
 
 /% sector 1 %/
 <<set $roomInfo['Harming Fights'] to {
-  exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  exits: [ ['Funny Mound', 'back to a funny mound', '(funny mound solved)'] ],
   todo: "Ugh! People here are squabbling about anything and everything. Boy, they think, if they get the right weapons, it'd really be on!<p />Perhaps you can slip them something bogus to get their hopes up and discourage such nonsense.",
-  done: "Whines for peace have supplanted war cries, and the people who once fought work together to, like, grow stuff. You just hope they share the profits equally.",
+  done: "Whines for peace have supplanted war cries. There are even some bad protest songs, which of course are better than the catchiest war cries. The people who once fought work together to, like, grow stuff. You just hope they share the profits equally.",
   available: false,
   solved: false,
   looted: false,
@@ -78,9 +78,9 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Weedy Nerds'] to {
-  exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  exits: [ ['Funny Mound', 'back to a funny mound', '(funny mound solved)'] ],
   todo: "Weedy nerds mill about here, posing about how much they know, but perhaps not being well-rounded enough.",
-  done: "The ex-weedy nerds will never be jocks and wouldn't want to be--they wouldn't be true to themselves--but they're ",
+  done: "The ex-weedy nerds will never be jocks and wouldn't want to be--they wouldn't be true to themselves--but the exercise makes this place livelier.  When they're stuck, they get up and exercise instead of whining, which improves the mood immensely.",
   available: false,
   solved: false,
   looted: false,
@@ -88,9 +88,9 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Feeling Diner'] to {
-  exits: [ ['Funny Mound', 'back to a funny mound', '(Funny Mound solved)'] ],
+  exits: [ ['Funny Mound', 'back to a funny mound', '(funny mound solved)'] ],
   todo: "People mope about here, eating bland food, bemoaning bland lives.",
-  done: "With a more exciting array of foods, people are enjoying their meals here more.",
+  done: "With a more exciting array of foods, people are enjoying their meals here more and finding hidden meaning in their lives..",
   available: false,
   solved: false,
   looted: false,
@@ -100,9 +100,9 @@ Trail Stash
 
 /% sector 2 %/
 <<set $roomInfo['Wash Pit'] to {
-  exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
-  todo: "Here people come to be washed free of seemingly lower-class stuff that isn't that bad. Existential despair!",
-  done: "The posh wit here is more intellectually high-class than social.",
+  exits: [ ['Small Isles', 'back to small isles', '(small isles solved)'] ],
+  todo: "Here people come to be washed free of seemingly lower-class stuff that really isn't that bad. Existential despair!",
+  done: "The posh wit here is more intellectually high-class than social, but it's more accessible since you threw in the unpairable buns.",
   available: false,
   solved: false,
   looted: false,
@@ -110,7 +110,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Drunk Shore'] to {
-  exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
+  exits: [ ['Small Isles', 'back to small isles', '(small isles solved)'] ],
   todo: "You feel a bit loopy from the fumes of what seems to be a lake. You're not sure. But it also feels sluggish. Maybe the right chemical reaction could uncover something underneath.",
   done: "There's nothing more behind the shrunk door. But it smells and looks nicer than the alcohol fumes.",
   available: false,
@@ -120,9 +120,9 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Feast Lake'] to {
-  exits: [ ['Small Isles', 'back to small isles', '(Small Isles solved)'] ],
+  exits: [ ['Small Isles', 'back to small isles', '(small isles solved)'] ],
   todo: "People eat guiltily here, wondering if they really deserve such a nice meal, maybe hoping for someone to compare themselves to so they don't feel so bad.",
-  done: "People eat and chat away happily, admitting their faults without being too proud of them.",
+  done: "People eat and chat away happily, admitting their faults without being too proud of them, even sharing coping and self-improvement tips.",
   available: false,
   solved: false,
   looted: false,
@@ -133,8 +133,8 @@ Trail Stash
 /% sector 3 %/
 
 <<set $roomInfo['Peer Class'] to {
-  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
-  todo: "All manner of instruction is going on, but alas, some peers appear to be fraudulent. If only you had something that could detect frauds.",
+  exits: [ ['Cheering Voice', 'back to cheering voice', '(cheering voice mowered through)'] ],
+  todo: "This is a place for high-level instruction and idea-swapping, but alas, some peers appear to be fraudulent. If only you had something that could detect frauds.",
   done: "The level of discussion in this educational circle is beyond you, but hey, you got your map piece.",
   available: false,
   solved: false,
@@ -142,9 +142,9 @@ Trail Stash
   solvedname: "Clear Pass"
   }
 >>
-<<set $roomInfo['Blighters Rock'] to {
-  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
-  todo: "Everyone here bemoans their lot in life, that they were meant for more than the nine-to-five. They could use a pick-me-up.",
+<<set $roomInfo["Blighters' Rock"] to {
+  exits: [ ['Cheering Voice', 'back to cheering voice', '(cheering voice mowered through)'] ],
+  todo: "Everyone here bemoans their lot in life, that they were meant for more than the nine-to-five. They could use a pick-me-up. The whining is surprisingly high-class and insightful.",
   done: "Fortunately, this is more a block of writers than people moaning about writers' block. They don't need to be disturbed now.",
   available: false,
   solved: false,
@@ -153,7 +153,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Zany Brew'] to {
-  exits: [ ['Cheering Voice', 'back to Cheering Voice', '(Cheering Voice mowered through)'] ],
+  exits: [ ['Cheering Voice', 'back to cheering voice', '(cheering voice mowered through)'] ],
   todo: "A wide menagerie of animals, ones you've seen before and ones you haven't, cycles around here, but it doesn't really feel like a home. They're not penned in, but it is too wide-open. They could use shelter.",
   done: "The animals here make up quite a brainy zoo, as they were clever enough to help you lift the dry tents which leave them more comfortable, rain or shine.",
   available: false,
@@ -167,8 +167,8 @@ Trail Stash
 
 <<set $roomInfo['Yacking Hard'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
-  todo: "There's lots of useless chatter around here, none of it particularly productive, mostly people who are bragging about how smart they are.",
-  done: "Inspired by seeing the tech chip you provided, people now search for knowledge here.",
+  todo: "There's lots of useless chatter around here, none of it particularly productive, mostly people who are bragging unconvincingly about how smart they are.",
+  done: "Inspired by seeing the tech chip you provided, people now search for knowledge here. Their conversation is more purposeful.",
   available: false,
   solved: false,
   looted: false,
@@ -178,7 +178,7 @@ Trail Stash
 <<set $roomInfo['Plaid Base'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
   todo: "The plaid base here isn't just tacky, trust me on this one. It should be destroyed. Don't worry, there's nobody inside. Evil is lazy that way.",
-  done: "The remains of the plaid base are a place you still don't want to stay, but at least it's less intimidating.",
+  done: "The remains of the evil (trust me! I just don't get wearing plaid! I mean, WHY?) plaid base lie here. You see no need to stay.",
   available: false,
   solved: false,
   looted: false,
@@ -188,7 +188,7 @@ Trail Stash
 <<set $roomInfo['Rusty Fiddlers'] to {
   exits: [ ['Ganging Hate', 'back to hanging gate', '(Hanging Gate traversed)'] ],
   todo: "Rusty fiddlers make bad music here. They look as if they could use something to give them a boost. Maybe not a temporarily and healthy boost, but a boost.",
-  done: "The fusty riddlers go on about all manner of riddles, abstract or requiring specific language. At least they're having fun.",
+  done: "The fusty riddlers, tongues lubricated by the booze clusters, go on about all manner of riddles, abstract or requiring specific language. At least they're having fun.",
   available: false,
   solved: false,
   looted: false,
@@ -211,46 +211,46 @@ Trail Stash
 
 /% first we take care of all the main area items %/
 
-<<set $itemInfo['Pert Door'] to {
+<<set $itemInfo['pert door'] to {
   initroom: 'Ganging Hate',
   useroom: 'Funny Mound',
   taken: false,
   map_piece: false,
   description: "A pert door stands here on its own. Odd!",
-  success: "You place the pert door down. Somehow, it sinks into the Funny Mound, lowering it. You now have passage through.",
+  success: "You place the pert door down. Somehow, it sinks into the funny mound, causing a small sinkhole. The pert door then opens, revealing passage outward to three new areas!",
   reveals: [ "Harming Fights", "Weedy Nerds", "Feeling Diner" ]
 }
 >>
 
-<<set $itemInfo['Hair Shirt'] to {
+<<set $itemInfo['hair shirt'] to {
   initroom: 'Funny Mound',
   useroom: 'Small Isles',
   taken: false,
   map_piece: false,
   description: "A hair shirt lies here, disused and unloved. Odd!",
-  success: "You share hurt in your hair shirt. People realize they are not alone. It makes everyone happy.",
+  success: "You share hurt in your hair shirt. The residents of the small isles share their own back. In short order, everyone is happy or at least rid of major worries. They now trust you, and they reveal isles behind them, to search at your leisure.",
   reveals: [ "Drunk Shore", "Wash Pit", "Feast Lake" ]
 }
 >>
 
-<<set $itemInfo['Quick Pest'] to {
+<<set $itemInfo['quick pest'] to {
   initroom: 'Small Isles',
   useroom: 'Cheering Voice',
   taken: false,
   map_piece: false,
   description: "A quick pest bounces back and forth here. It must get exhausted soon, right?",
-  success: "The quick pest is ready to go again. It zips back and forth, destroying some bulwarks and opening three new passages.",
-  reveals: [ "Peer Class", "Blighters Rock", "Zany Brew" ]
+  success: "The quick pest leaps from your hands. It zips back and forth, causing the cheering voice distress. The voice's happiness was fake! It had merely been an anodyne to trap adventurers into not really looking around. Its scream as it disappears shatters a few barriers and opens three new passages.",
+  reveals: [ "Peer Class", "Blighters' Rock", "Zany Brew" ]
 }
 >>
 
-<<set $itemInfo['Hard Candy'] to {
+<<set $itemInfo['hard candy'] to {
   initroom: 'Cheering Voice',
   useroom: 'Ganging Hate',
   taken: false,
   map_piece: false,
   description: "Some hard candy is here, still in its wrapper.",
-  success: "There's nothing like candy to dispel ganging hate! Even if it is not very good candy! As the ganging hate subsides, you notice other passages through.",
+  success: "There's nothing like candy to dispel ganging hate! Even if it is not very good candy! People appreciate the thought. Well, unless it's circus peanuts. (Eww.)<p />The ganging hate flies up to where it isn't blocking you way any more. You see several new places to visit!",
   reveals: [ "Yacking Hard", "Rusty Fiddlers", "Plaid Base" ]
 }
 >>
@@ -259,69 +259,69 @@ Trail Stash
 
 /% from area 1 %/
 
-<<set $itemInfo['Unpairable Buns'] to {
+<<set $itemInfo['unpairable buns'] to {
   initroom: 'Feeling Diner',
   useroom: 'Wash Pit',
   taken: false,
   map_piece: true,
-  description: "You see several Unpairable Buns here. I mean, they probably taste okay, but they'd just look weird making a hamburger or whatever.",
-  success: "The Unpairable Buns are too low-class for the sort of jokes around here. The worst of the elitists flee, leaving behind a map piece, which you take.",
+  description: "You see several unpairable buns here. I mean, they probably taste okay, but they'd just look weird making a hamburger or whatever.",
+  success: "The unpairable buns are too low-class for the sort of jokes around here. The worst of the elitists flee, leaving behind a map piece, which you take.",
   reveals: [ ]
 }
 >> /% 1-2 %/
 
-<<set $itemInfo['Funk Pail'] to {
+<<set $itemInfo['funk pail'] to {
   initroom: 'Harming Fights',
   useroom: 'Peer Class',
   taken: false,
   map_piece: true,
   description: "A funk pail lies here, old and discarded, once useful for chores but no more.",
-  success: "The funk pail reveals the poseurs who participate a lot in class but do not contribute anything! Faced with this truth they cannot but flee. The remaining members, glad to have the time-wasters weeded out, give you a map piece as thanks.",
+  success: "The funk pail reveals the poseurs who participate a lot in class but do not contribute anything! Faced with this truth, they feel compelled to flee. The remaining members, glad to have the time-wasters weeded out, give you a map piece as thanks. They can't use it. They're all searching for, like, wisdom and stuff.",
   reveals: [ ]
 }
 >> /% 1-3 %/
 
-<<set $itemInfo['Tech Chip'] to {
+<<set $itemInfo['tech chip'] to {
   initroom: 'Weedy Nerds',
   useroom: 'Yacking Hard',
   taken: false,
   map_piece: true,
-  description: "The Weedy Nerds have discarded a tech chip here.",
-  success: "The tech chip seems to be just the thing to get the Yacking, Hard to change subject. The yackers in question know just what to do with it. They had been talking about doing technical stuff for a while, but nobody ever pushed them to do anything. This chip is just what they need! As thanks, they give you a piece of the treasure map.",
+  description: "The weedy nerds have discarded a tech chip here.",
+  success: "The tech chip seems to be just the thing to get the yacking, hard to change subject. The yackers in question know just what to do with it. They had been talking about doing technical stuff for a while, but nobody ever pushed them to do anything. This chip is just what they need! As thanks, they give you a piece of the treasure map.",
   reveals: [ ]
 }
 >> /% 1-4 %/
 
 /% from area 2 %/
 
-<<set $itemInfo['Spicy Prune'] to {
+<<set $itemInfo['spicy prune'] to {
   initroom: 'Feast Lake',
   useroom: 'Feeling Diner',
   taken: false,
   map_piece: true,
   description: "A spicy prune sits here untouched and not too dirty.",
-  success: "The spicy prune causes an upheaval of the usually tacit and boring Feeling Diner. Conversation had gotten too whiny. The patrons plan on doing a bit more. They look around for a way to give thanks. They have it--a piece of the map you need!",
+  success: "The spicy prune causes an upheaval of the usually tacit and boring Feeling Diner. Conversation had gotten too whiny. The patrons plan on doing a bit more. They look around for a way to give thanks. They have it--a piece of the map you need! The diner's a bit more lively, discussing not just problems but how to deal with them.",
   reveals: [ ]
 }
 >> /% 2-1 %/
 
-<<set $itemInfo['Tridents'] to {
+<<set $itemInfo['tridents'] to {
   initroom: 'Wash Pit',
   useroom: 'Zany Brew',
   taken: false,
   map_piece: true,
-  description: "A couple of tridents lie here, washed up from the deep, I guess. They look glowing and full of latent power. But not here.",
+  description: "A couple of tridents lie here, washed up from the deep, I guess. They look glowing and full of latent power. But that power will not come to fruition here.",
   success: "You plant the tridents, and as they do, they grow to an enormous size. (Un)surprisingly, once you do, the animals uncover some dry tents and rope off to the side that were useless without anything to hold them up. A brief search reveals even more sticks and suck that support things. You are clueless with knots, but some animals some way, somehow, show you. Smart! They have a place to roam and see and be seen, in this open-range zoo.",
   reveals: [ ]
 }
 >> /% 2-3 %/
 
-<<set $itemInfo['Booze Cluster'] to {
+<<set $itemInfo['booze cluster'] to {
   initroom: 'Drunk Shore',
   useroom: 'Rusty Fiddlers',
   taken: false,
   map_piece: true,
-  description: "A booze cluster lies here.",
+  description: "A booze cluster lies here. It seems very quantity-over-quality. Not that there's anything wrong with that.",
   success: "The booze cluster seems to satisfy the rusty fiddlers. They discuss various things like how a raven is like a writing-desk, or how to fill a seven-gallon jug with a three- and five-gallon jug, and, indeed, what the general case is for when you can and can't do that, and how to do so in the optimum number of terms. Quite bluntly, you find it a bit boring, but they don't. They're so happy, in fact, they give you a map piece!",
   reveals: [ ]
 }
@@ -329,18 +329,18 @@ Trail Stash
 
 /% from area 3 %/
 
-<<set $itemInfo['Grease Pipe'] to {
-  initroom: 'Blighters Rock',
+<<set $itemInfo['grease pipe'] to {
+  initroom: "Blighters' Rock",
   useroom: 'Harming Fights',
   taken: false,
   map_piece: true,
-  description: "A Grease Pipe lies here, probably part of some trash thoughtlessly dumped.",
-  success: "You hand the Grease Pipes to each of the fighters. They are glad to have such strong looking weapons! They are so consumed with winning that you did not realize you gave one to their enemy. Nevertheless, when they try to actually wield the pipes, said pipes slip from their hands. They were already pretty tired of fighting, and after a while, they realize they just want peace, and they may just be destroying the land they are fighting over.",
+  description: "A grease pipe lies here, probably part of some trash thoughtlessly dumped.",
+  success: "You hand the grease pipes to each of the fighters. They are glad to have such strong looking weapons! They are so consumed with winning that you did not realize you gave one to their enemy. Nevertheless, when they try to actually wield the pipes, said pipes slip from their hands. They were already pretty tired of fighting, and after a while, they realize they just want peace, and they may just be destroying the land they are fighting over.",
   reveals: [ ]
 }
 >> /% 3-1 %/
 
-<<set $itemInfo['Dummy Scoop'] to {
+<<set $itemInfo['dummy scoop'] to {
   initroom: 'Peer Class',
   useroom: 'Feast Lake',
   taken: false,
@@ -351,7 +351,7 @@ Trail Stash
 }
 >> /% 3-2 %/
 
-<<set $itemInfo['Filed Wire'] to {
+<<set $itemInfo['filed wire'] to {
   initroom: 'Zany Brew',
   useroom: 'Plaid Base',
   taken: false,
@@ -364,31 +364,31 @@ Trail Stash
 
 /% from area 4 %/
 
-<<set $itemInfo['Wee Freights'] to {
+<<set $itemInfo['wee freights'] to {
   initroom: 'Yacking Hard',
   useroom: 'Weedy Nerds',
   taken: false,
   map_piece: true,
-  description: "Some Wee Freights lie here, a neat subject of conversation, but sadly these trains have no track or power of locomotion.",
-  success: "The Weedy Nerds are quickly very interested in the Wee Freights. The process of moving and organizing said Freights gets longer. They analyze the structure of the Freights and build bigger ones. All this is a good workout--something the Weedy Nerds once avoided. Yet they seemed refreshed by it all. They are shocked to find exercise has cleared their mind and helped them focus on some goals and achieve others! A good bout of exercise also opens their minds to more subjective things, not just technical creations and such. They give you a piece of map for helping them realize this.",
+  description: "Some wee freights lie here, a neat subject of conversation, but sadly these trains have no track or power of locomotion.",
+  success: "The weedy nerds are quickly very interested in the wee freights. The process of moving and organizing said freights gets longer. They analyze the structure of the freights and build bigger ones. All this is a good workout--something the weedy nerds once avoided. Yet they seemed refreshed by it all. They are shocked to find exercise has cleared their mind and helped them focus on some goals and achieve others! A good bout of exercise also opens their minds to more subjective things, not just technical creations and such. They give you a piece of map for helping them realize this.",
   reveals: [ ]
 }
 >> /% 4-1 %/
 
-<<set $itemInfo['Cheese on a cane'] to {
+<<set $itemInfo['cheese on a cane'] to {
   initroom: 'Plaid Base',
   useroom: 'Drunk Shore',
   taken: false,
   map_piece: true,
   description: "Some cheese on a cane has been discarded. Mmm, cheese.",
-  success: "The Cheese on a Cane, being thick, gums up the Drunk Shore and dehydrates it enough to realize ... a shrunk door! You open it. There's a map piece in there.",
+  success: "The cheese on a cane, being thick, gums up the drunk shore and dehydrates it enough to realize ... a shrunk door! You open it. There's a map piece in there.",
   reveals: [ ]
 }
 >> /% 4-2 %/
 
-<<set $itemInfo['Picky Quill'] to {
+<<set $itemInfo['picky quill'] to {
   initroom: 'Rusty Fiddlers',
-  useroom: 'Blighters Rock',
+  useroom: "Blighters' Rock",
   taken: false,
   map_piece: true,
   description: "A picky quill lies here. Whenever the rusty fiddlers get close, it jumps away. Who could be its rightful owner?",
@@ -457,14 +457,14 @@ Trail Stash
   <<elseif _y == "Inventory" or _y == "Try (Ooh,) I? True!" or _y == "Credits" or _y == "About">>
     [[As you were|$oldpsg]]
   <<else>>
-  <font color=green>(likely dead end/death trap--just undo in the left column!)</font>
+  <font color=green>(This is a dead end/death trap--just undo in the left column!)</font>
   <</if>>
   </center>
 <</widget>>
 
 <<widget "takelink">>
   <<set _psg=passage()>>
-  <br /><<print $itemInfo[$args[0]].description>> (<<link [[Take it|_psg]]>><<set $itemInfo[$args[0]].taken=true>><<set $inventory.push($args[0])>><<set $roomInfo[_psg].looted=true>><</link>>)
+  <p /><<print $itemInfo[$args[0]].description>> (<<link [[Take it|_psg]]>><<set $itemInfo[$args[0]].taken=true>><<set $inventory.push($args[0])>><<set $roomInfo[_psg].looted=true>><</link>>)
 <</widget>>
 
 <<widget "showitems">>
@@ -565,6 +565,8 @@ The creative part for <i>Trail Stash</i> started a while ago, because I always e
 
 Twinery.org was a huge help for so much, both the cookbook and the people who asked questions so I didn't have to. Some of them, I looked up the question more than once, because I forgot.
 
+Thanks to Felicity Banks for very helpful testing very near to the IFComp deadline. How near? So near, I forgot to credit her in the original comp version, which I feel really bad about. (I had this suspicion I was forgetting something!) Go play <i>Bali B&B</i>, her entry in the 2023 IFComp.
+
 Thanks to all past and current IFComp organizers. Thanks to you for taking the time to play this, and extra thanks if you find the time to judge and/or write reviews. There will be a lot more substantial games out there than this. They are worth seeing. Some may, too, be one-trick ponies like <i>Trail Stash</i>, but they may be a trick you like. Explore around and enjoy as much as you can.
 
 ((BETA TESTERS HERE))
@@ -589,7 +591,7 @@ Thanks to all past and current IFComp organizers. Thanks to you for taking the t
 
 :: Growing Need, Knowing Greed
 
-You heard legends of a valuable trail stash 'round these here parts. Of course you liked the idea of being rich. You balanced thoughts in your head: knowing greed? Growing need? Others sought to it, telling you "ought to sit." But you snuck out on your own, when you heard a voice calling "[[SEE DIRE DESIRE|Weak Cell]]."
+You've heard legends of a valuable trail stash 'round these here parts. Of course you liked the idea of being rich. You balanced thoughts in your head: knowing greed? Growing need? Ought to sit? Sought, too, it?<p />But you soon got sick of all this flip-flopping and snuck out on your own, when you heard a voice calling "[[SEE DIRE DESIRE|Weak Cell]]."
 
 :: Weak Cell
 
@@ -601,7 +603,7 @@ A map split into twelve parts would lead to the treasure, and sadly, there wasn'
 
 <<roomstuff>>
 
-There's a very suspicious blob rind lying here! You may be able to figure out what it's doing, or it might do, so you'll know whether or not you want to [[inspect it|Rob Blind]].
+There's a very suspicious blob rind lying here! You kind of want to [[inspect it|Rob Blind]], as you might learn something, but you're also worried that the only thing you'll learned is "I shouldn't have looked too closely, there."
 
 :: Harming Fights
 
@@ -651,7 +653,7 @@ There's a very suspicious blob rind lying here! You may be able to figure out wh
 
 <<roomstuff>>
 
-:: Blighters Rock
+:: Blighters' Rock
 
 <<roomstuff>>
 
@@ -677,4 +679,4 @@ Whichever. You're eager to go improve lives, and stuff. You kick a gold bowl out
 
 :: Rob Blind
 
-Oh, no! The blob rind swells up to several times its original side in order to, uh, rob you blind. It only enveloped your belongings, not you, but you're so embarrassed by the experience, you give up. Or, you know, you can just click the back arrow, slightly wiser for your experience.
+Oh, no! The blob rind swells up to several times its original size in order to, uh, rob you blind. It only enveloped your belongings, not you, but you're so embarrassed by the experience, you give up. Or, you know, you can just click the back arrow, slightly wiser for your experience.
