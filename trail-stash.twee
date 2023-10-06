@@ -402,10 +402,6 @@ Trail Stash
 <<=passage()>>
 <</widget>>
 
-<<widget "solvethis">>
-<<set $roomInfo[passage()].solved = true>>
-<</widget>>
-
 <<widget "roomto">>
   <<set _in=passage()>>
   <<set _my_array = $roomInfo[_in].exits[$args[0]]>>
