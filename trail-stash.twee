@@ -18,7 +18,7 @@ Trail Stash
 <<set $roomInfo to {}>>
 <<set $itemInfo to {}>>
 <<set $inventory to []>>
-<<set $oldpsg to "">>
+<<set $oldpsg to "(none yet)">>
 <<set $useitem to "">>
 <<set $inner_items_used to 0>>
 <<set $total_map_pieces to 0>>
@@ -431,6 +431,8 @@ Trail Stash
 >> /% 4-3 %/
 
 <<set $hard_mode to false>>
+<<set $brief_mode to false>>
+
 
 :: Story Widgets [widget nobr]
 <<widget "thispassage">>
@@ -531,6 +533,13 @@ Trail Stash
   <<if Object.keys($roomInfo).contains($oldpsg) and $roomInfo[$oldpsg].solved>>
   <br />You seem to have set things straight here, though, so no need to use anything further.
   <</if>>
+  <<if $brief_mode is false>>
+    <<for _j = 0; _j < $itemorder.length; _j++>>
+      <<if $itemInfo[$itemorder[_j]].used is true and (_j > 4 or $inner_items_used < 4)>>
+        <br />You found the $itemorder[_j] in <<print $itemInfo[$itemorder[_j]].initroom>>, successfully used <<if $itemInfo[$itemorder[_j]].useroom is $oldpsg>>here<<else>>in <<print $itemInfo[$itemorder[_j]].useroom>><</if>>.
+      <</if>>
+    <</for>>
+  <</if>>
 <</widget>>
 
 <<widget "usewidget">>
@@ -584,9 +593,18 @@ Trail Stash
 
 <<widget "outsides">>$args[0]<<if $roomInfo[$args[0]].area > 0>>, outside <<print $roomInfo[$args[0]].exits[0][0]>><</if>><</widget>>
 
-/% <<set $roomInfo[$itemInfo[$useitem].reveals[_b]].available = true>> %/
-
 :: StoryMenu [StoryMenu]
+
+<<if not $metarooms.contains(passage())>><<set $oldpsg=passage()>><</if>>
+
+[[Inventory]]
+
+[[About]]
+
+[[Credits]]
+
+<<link "<font color=blue>&lt;set options below&gt;</font>">>
+<</link>>
 
 <<set _bumper_toggle_msg to ['Completed areas <b>BLOCKED</b>. Click to unblock.', 'Completed areas <b>UNBLOCKED</b>. Click to block.']>>
 <<set _hm to _bumper_toggle_msg[Number($hard_mode)]>>
@@ -597,13 +615,14 @@ Trail Stash
 	<<replace "#hmopt">>_hm<</replace>>
 <</link>>
 
-<<if not $metarooms.contains(passage())>><<set $oldpsg=passage()>><</if>>
+<<set _brief_msg to ['<b>VERBOSE</b> inventory. Click for brief.', '<b>BRIEF</b> inventory. Click for verbose.']>>
+<<set _vi to _brief_msg[Number($brief_mode)]>>
 
-[[Inventory]]
-
-[[About]]
-
-[[Credits]]
+<<link "<span id='invopt'>_vi</span>">>
+	<<set $brief_mode to not $brief_mode>>
+    <<set _vi to _brief_msg[Number($brief_mode)]>>
+	<<replace "#invopt">>_vi<</replace>>
+<</link>>
 
 :: About
 
@@ -635,7 +654,7 @@ General thanks:
 
 Thanks to all past and current IFComp organizers. Thanks to you for taking the time to play this, and extra thanks if you find the time to judge and/or write reviews. There will be a lot more substantial games out there than this. They are worth seeing. Some may, too, be one-trick ponies like <i>Trail Stash</i>, but they may be a trick you like. Explore around and enjoy as much as you can.
 
-::Inventory
+:: Inventory
 
 <<showinventory>>
 
