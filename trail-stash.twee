@@ -13,9 +13,7 @@ Trail Stash
 
 :: StoryInit
 
-/% todo: make intro screen with background %/
-/% todo: make a list of meta rooms so if-thens get cut down if $metarooms.contains("my_string") %/
-/% Hizzy Bub is place, Bed Hangars too %/
+/% Hizzy Bub and Bed Hangars made the cut as locations at first before making way. Maybe put them in a future game? %/
 
 <<set $roomInfo to {}>>
 <<set $itemInfo to {}>>
@@ -551,25 +549,35 @@ Trail Stash
 
 [[Credits]]
 
-::About
+:: About
+
+If you're curious about the source, it is [[here|https://github.com/andrewschultz/trail-stash]]. I didn't do anything especially tricky (I don't think!) and I hope the source is readable. I lumped some of it together so end-spaces weren't tacked on. There's a way around that, but I hadn't nailed that down as of IFComp release.
 
 The technical part for <i>Trail Stash</i> was roughly conceived in April 2023, during Spring Thing. After playing Leon Lin's <i>Insomnia</i>, which branched to 26 different endings and had some buffer against visiting the same one twice, I wondered--what about blocking off passages in Twine where they, and the rooms behind them, were done? I'd done so with parser games, first with <i>Ailihphilia</i>, but there it was a bit of a cheat, because the map had no loops. You had rooms with only one path in to the center room. So you could just search through all the out directions! Then, with <i>Low-Key Learny Jokey Journey</i>, I made something more robust and general. But Inform makes it easier to search rooms with directions, due to room properties etc.
 
 So what about Twine? It presented a new and interesting challenge, but it was eminently doable. I build up the code in July or so, then raced near the end of September, looking through my big file of spoonerisms. In a way, it was nice to limit myself to few rooms with so little time left. I didn't have time to create the fully complex world, but I built one which I think shows a technical proof of concept, and it's less likely the joke will get old.
 
-The game is not meant to be deep. There are sixteen rooms in a symmetrical map. There is an inner ring of four rooms, and each room leads out to three more. This kind of moots the example in some ways, since you don't see everything shut off until near the end--if there are two rooms in the inner ring with something to do, the whole inner ring is available. So perhaps this is best with a branching structure with more and longer dead ends. I originally planed each ring leading to two rooms, which led to two rooms, but that made too many rooms for the time I had. As-is, you get to see things at the end.
+The game is not meant to be deep. There are sixteen rooms in a symmetrical map. There is an inner ring of four rooms, and each room leads out to three more. This kind of moots the example in some ways, since you don't see everything shut off until near the end--if there are two rooms in the inner ring with something to do, the whole inner ring is available. So perhaps the technical exhibition is best with a branching structure with more and longer dead ends, but then the game might get too drawn-out. (Plus, I was low on time.) I originally planed each ring leading to two rooms, which led to two rooms, but that made too many rooms for the time I had. As-is, you get to see things at the end.
 
-The creative part for <i>Trail Stash</i> started a while ago, because I always enjoyed spoonerisms (who doesn't?) but for parser games, there wasn't much of a puzzle to figure out spoonerisms, so it didn't seem like I could string much together, or I couldn't do it as well as <i>Nord and Bert Couldn't Make Head or Tail of It</i>. With Twine, though, hopefully the double meanings will provide chuckles before things get too, um, stale. I needed ones that roughly made sense and matched each way they were flipped. I hope you enjoy the result and it encourages you to try your own odd experiments.
+The creative part for <i>Trail Stash</i> started a long while ago, when I started putting a spoonerism section in my weekly notes files, because I always enjoyed spoonerisms (who doesn't?) But for parser games, there wasn't much of a puzzle to figure out spoonerisms, so it didn't seem like I could string much together, or I couldn't do it as well as <i>Nord and Bert Couldn't Make Head or Tail of It</i> in its "Shake a Tower" segment. Or it would be a bit too fiddly (not clear when or where to use spoonerisms) or straightforward (all about spoonerisms.) I couldn't find a balance.
 
-::Credits
+With Twine, though, hopefully the double meanings will provide chuckles before things get too, um, stale. I needed ones that roughly made sense and matched each way they were flipped. I hope you enjoy the result and it encourages you to try your own odd experiments.
 
-Twinery.org was a huge help for so much, both the cookbook and the people who asked questions so I didn't have to. Some of them, I looked up the question more than once, because I forgot.
+:: Credits
+
+Specific thanks:
 
 Thanks to Felicity Banks for very helpful testing very near to the IFComp deadline. How near? So near, I forgot to credit her in the original comp version, which I feel really bad about. (I had this suspicion I was forgetting something!) Go play <i>Bali B&B</i>, her entry in the 2023 IFComp.
 
-Thanks to all past and current IFComp organizers. Thanks to you for taking the time to play this, and extra thanks if you find the time to judge and/or write reviews. There will be a lot more substantial games out there than this. They are worth seeing. Some may, too, be one-trick ponies like <i>Trail Stash</i>, but they may be a trick you like. Explore around and enjoy as much as you can.
+Thanks to Noah Xi for suggesting an actual in-game graphical map since I, well, talked about collecting map pieces.
 
-((BETA TESTERS HERE))
+Thanks to Joey Jones for the poke to, well, open up my GitHub repo, which also tipped off a useful feature I'd half-forgotten about. He's written/co-written several neat things, including for Choice of Games. <i>Sub Rosa</i> is his most recent parser effort.
+
+General thanks:
+
+[[Twinery.org|http://twinery.org]] was a huge help for so much, both the cookbook and the people who asked questions so I didn't have to. Some of the questions, I looked up the question more than once, either because I forgot how to do something, or I realized there were deeper things to know beyond "hey, this works for now." It's read-only now, and new questions go to [[intfiction|http://intfiction.org]], where I asked other questions, but aspiring Twine authors will find so much there!
+
+Thanks to all past and current IFComp organizers. Thanks to you for taking the time to play this, and extra thanks if you find the time to judge and/or write reviews. There will be a lot more substantial games out there than this. They are worth seeing. Some may, too, be one-trick ponies like <i>Trail Stash</i>, but they may be a trick you like. Explore around and enjoy as much as you can.
 
 ::Inventory
 
