@@ -21,6 +21,7 @@ Trail Stash
 <<set $oldpsg to "">>
 <<set $useitem to "">>
 <<set $total_map_pieces to 0>>
+<<set $metarooms to [ "Credits", "About", "Inventory", "Try (Ooh,) I? True!", "Game Map", "Treasure Map" ]>>
 
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
@@ -480,7 +481,7 @@ Trail Stash
         <<roomto _a>>
 	  <</if>>
     <</for>>
-  <<elseif _y == "Inventory" or _y == "Try (Ooh,) I? True!" or _y == "Credits" or _y == "About">>
+  <<elseif $metarooms.contains(_y)>>
     [[As you were|$oldpsg]]
   <<else>>
   <font color=green>(This is a dead end/death trap--just undo in the left column!)</font>
@@ -569,7 +570,7 @@ Trail Stash
 	<<replace "#dif">>_hm<</replace>>
 <</link>>
 
-<<if passage()!="Try (Ooh,) I? True!" and passage()!="Inventory" and passage()!="Credits" and passage()!="About">><<set $oldpsg=passage()>><</if>>
+<<if not $metarooms.contains(passage())>><<set $oldpsg=passage()>><</if>>
 
 [[Inventory]]
 
