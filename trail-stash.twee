@@ -30,6 +30,7 @@ Trail Stash
   available: true,
   solved: false,
   looted: false,
+  area: 0,
   solvedname: 'Money Found'
   }
 >>
@@ -40,6 +41,7 @@ Trail Stash
   available: true,
   solved: false,
   looted: false,
+  area: 0,
   solvedname: "All Smiles"
   }
 >>
@@ -50,6 +52,7 @@ Trail Stash
   available: true,
   solved: false,
   looted: false,
+  area: 0,
   solvedname: "Hanging Gate"
   }
 >>
@@ -60,6 +63,7 @@ Trail Stash
   available: true,
   solved: false,
   looted: false,
+  area: 0,
   solvedname: "Veering Choice"
   }
 >>
@@ -72,6 +76,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 1,
   solvedname: "Farming Heights"
   }
 >>
@@ -82,6 +87,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 1,
   solvedname: "Needy Words"
   }
 >>
@@ -92,6 +98,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 1,
   solvedname: "Dealing Finer"
   }
 >>
@@ -104,6 +111,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 2,
   solvedname: "Posh Wit"
   }
 >>
@@ -114,6 +122,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 2,
   solvedname: "Shrunk Door"
   }
 >>
@@ -124,6 +133,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 2,
   solvedname: "Least Fake"
   }
 >>
@@ -137,6 +147,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 3,
   solvedname: "Clear Pass"
   }
 >>
@@ -147,6 +158,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 3,
   solvedname: "Writers' Block"
   }
 >>
@@ -157,6 +169,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 3,
   solvedname: "Brainy Zoo"
   }
 >>
@@ -170,6 +183,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 4,
   solvedname: "Hacking Yard"
   }
 >>
@@ -180,6 +194,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 4,
   solvedname: "Bad Place"
   }
 >>
@@ -190,6 +205,7 @@ Trail Stash
   available: false,
   solved: false,
   looted: false,
+  area: 4,
   solvedname: "Fusty Riddlers"
   }
 >>
@@ -212,6 +228,7 @@ Trail Stash
 <<set $itemInfo['pert door'] to {
   initroom: 'Ganging Hate',
   useroom: 'Funny Mound',
+  used: false,
   taken: false,
   map_piece: false,
   description: "A pert door stands here on its own. Odd!",
@@ -224,6 +241,7 @@ Trail Stash
   initroom: 'Funny Mound',
   useroom: 'Small Isles',
   taken: false,
+  used: false,
   map_piece: false,
   description: "A hair shirt lies here, disused and unloved. Odd!",
   success: "You share hurt in your hair shirt. The residents of the small isles share their own back. In short order, everyone is happy or at least rid of major worries. They now trust you, and they reveal isles behind them, to search at your leisure.",
@@ -235,6 +253,7 @@ Trail Stash
   initroom: 'Small Isles',
   useroom: 'Cheering Voice',
   taken: false,
+  used: false,
   map_piece: false,
   description: "A quick pest bounces back and forth here. It must get exhausted soon, right?",
   success: "The quick pest leaps from your hands. It zips back and forth, causing the cheering voice distress. The voice's happiness was fake! It had merely been an anodyne to trap adventurers into not really looking around. Its scream as it disappears shatters a few barriers and opens three new passages.",
@@ -246,6 +265,7 @@ Trail Stash
   initroom: 'Cheering Voice',
   useroom: 'Ganging Hate',
   taken: false,
+  used: false,
   map_piece: false,
   description: "Some hard candy is here, still in its wrapper.",
   success: "There's nothing like candy to dispel ganging hate! Even if it is not very good candy! People appreciate the thought. Well, unless it's circus peanuts. (Eww.)<p />The ganging hate flies up to where it isn't blocking you way any more. You see several new places to visit!",
@@ -261,6 +281,7 @@ Trail Stash
   initroom: 'Feeling Diner',
   useroom: 'Wash Pit',
   taken: false,
+  used: false,
   map_piece: true,
   description: "You see several unpairable buns here. I mean, they probably taste okay, but they'd just look weird making a hamburger or whatever.",
   success: "The unpairable buns are too low-class for the sort of jokes around here. The worst of the elitists flee, leaving behind a map piece, which you take.",
@@ -272,6 +293,7 @@ Trail Stash
   initroom: 'Harming Fights',
   useroom: 'Peer Class',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A funk pail lies here, old and discarded, once useful for chores but no more.",
   success: "The funk pail reveals the poseurs who participate a lot in class but do not contribute anything! Faced with this truth, they feel compelled to flee. The remaining members, glad to have the time-wasters weeded out, give you a map piece as thanks. They can't use it. They're all searching for, like, wisdom and stuff.",
@@ -283,6 +305,7 @@ Trail Stash
   initroom: 'Weedy Nerds',
   useroom: 'Yacking Hard',
   taken: false,
+  used: false,
   map_piece: true,
   description: "The weedy nerds have discarded a tech chip here.",
   success: "The tech chip seems to be just the thing to get the yacking, hard to change subject. The yackers in question know just what to do with it. They had been talking about doing technical stuff for a while, but nobody ever pushed them to do anything. This chip is just what they need! As thanks, they give you a piece of the treasure map.",
@@ -296,6 +319,7 @@ Trail Stash
   initroom: 'Feast Lake',
   useroom: 'Feeling Diner',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A spicy prune sits here untouched and not too dirty.",
   success: "The spicy prune causes an upheaval of the usually tacit and boring Feeling Diner. Conversation had gotten too whiny. The patrons plan on doing a bit more. They look around for a way to give thanks. They have it--a piece of the map you need! The diner's a bit more lively, discussing not just problems but how to deal with them.",
@@ -307,6 +331,7 @@ Trail Stash
   initroom: 'Wash Pit',
   useroom: 'Zany Brew',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A couple of tridents lie here, washed up from the deep, I guess. They look glowing and full of latent power. But that power will not come to fruition here.",
   success: "You plant the tridents, and as they do, they grow to an enormous size. (Un)surprisingly, once you do, the animals uncover some dry tents and rope off to the side that were useless without anything to hold them up. A brief search reveals even more sticks and suck that support things. You are clueless with knots, but some animals some way, somehow, show you. Smart! They have a place to roam and see and be seen, in this open-range zoo.",
@@ -318,6 +343,7 @@ Trail Stash
   initroom: 'Drunk Shore',
   useroom: 'Rusty Fiddlers',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A booze cluster lies here. It seems very quantity-over-quality. Not that there's anything wrong with that.",
   success: "The booze cluster seems to satisfy the rusty fiddlers. They discuss various things like how a raven is like a writing-desk, or how to fill a seven-gallon jug with a three- and five-gallon jug, and, indeed, what the general case is for when you can and can't do that, and how to do so in the optimum number of terms. Quite bluntly, you find it a bit boring, but they don't. They're so happy, in fact, they give you a map piece!",
@@ -331,6 +357,7 @@ Trail Stash
   initroom: "Blighters' Rock",
   useroom: 'Harming Fights',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A grease pipe lies here, probably part of some trash thoughtlessly dumped.",
   success: "You hand the grease pipes to each of the fighters. They are glad to have such strong looking weapons! They are so consumed with winning that you did not realize you gave one to their enemy. Nevertheless, when they try to actually wield the pipes, said pipes slip from their hands. They were already pretty tired of fighting, and after a while, they realize they just want peace, and they may just be destroying the land they are fighting over.",
@@ -342,6 +369,7 @@ Trail Stash
   initroom: 'Peer Class',
   useroom: 'Feast Lake',
   taken: false,
+  used: false,
   map_piece: true,
   description: "A dummy scoop lies here. Everyone seems to look down on it here, but it doesn't seem to be helping them much. All the (alleged) dummies, perhaps, have been scooped from such an advanced class.",
   success: "The dummy scoop leaves the feasters horrified at first, but then they realize -- here is something even faker than they are! Obviously they have work to do to be themselves, but perhaps they were further along than they thought. They hand you a map piece.",
@@ -353,6 +381,7 @@ Trail Stash
   initroom: 'Zany Brew',
   useroom: 'Plaid Base',
   taken: false,
+  used: false,
   map_piece: true,
   description: "Some filed wire lies here. It could be hazardous!",
   success: "The filed wire lands on the tackiest part of the plaid base, and the sun glints off it. It catches flame. The base is consumed, and as you sift through the ashes, you find a map piece.",
@@ -366,6 +395,7 @@ Trail Stash
   initroom: 'Yacking Hard',
   useroom: 'Weedy Nerds',
   taken: false,
+  used: false,
   map_piece: true,
   description: "Some wee freights lie here, a neat subject of conversation, but sadly these trains have no track or power of locomotion.",
   success: "The weedy nerds are quickly very interested in the wee freights. The process of moving and organizing said freights gets longer. They analyze the structure of the freights and build bigger ones. All this is a good workout--something the weedy nerds once avoided. Yet they seemed refreshed by it all. They are shocked to find exercise has cleared their mind and helped them focus on some goals and achieve others! A good bout of exercise also opens their minds to more subjective things, not just technical creations and such. They give you a piece of map for helping them realize this.",
@@ -377,6 +407,7 @@ Trail Stash
   initroom: 'Plaid Base',
   useroom: 'Drunk Shore',
   taken: false,
+  used: false,
   map_piece: true,
   description: "Some cheese on a cane has been discarded. Mmm, cheese.",
   success: "The cheese on a cane, being thick, gums up the drunk shore and dehydrates it enough to realize ... a shrunk door! You open it. There's a map piece in there.",
@@ -388,6 +419,7 @@ Trail Stash
   initroom: 'Rusty Fiddlers',
   useroom: "Blighters' Rock",
   taken: false,
+  used: false,
   map_piece: true,
   description: "A picky quill lies here. Whenever the rusty fiddlers get close, it jumps away. Who could be its rightful owner?",
   success: "The picky quill leaps from blighter to blighter, each of whom feels inspired. It's like a chemical charge, only with less withdrawal and addiction! They all feel more free to do, be, and report what they did and were. They offer you a piece of the map as thanks.",
