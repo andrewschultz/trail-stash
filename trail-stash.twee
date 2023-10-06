@@ -428,7 +428,7 @@ Trail Stash
 }
 >> /% 4-3 %/
 
-<<set $hardmode=false>>
+<<set $hard_mode to false>>
 
 :: Story Widgets [widget nobr]
 <<widget "thispassage">>
@@ -443,7 +443,7 @@ Trail Stash
   <<set $toTraverse = [ _out ]>>
   <<set $canTraverse = true>>
   <<set $foundUnsolved = false>>
-  <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved) and (not $hardmode); _i++>>
+  <<for _i = 0; (_i < 25) and ($canTraverse) and (not $foundUnsolved) and (not $hard_mode); _i++>>
     <<set $canTraverse = false>>
     <<for _j = 0; (_j < $toTraverse.length) and (not $foundUnsolved); _j++>>
 	  <<if $roomInfo[$toTraverse[_j]].solved == false or $roomInfo[$toTraverse[_j]].looted == false>>
@@ -458,7 +458,7 @@ Trail Stash
 	  <</if>>
 	<</for>>
   <</for>>
-  <<if $foundUnsolved or $hardmode>>
+  <<if $foundUnsolved or $hard_mode>>
 	  [[_my_array[1]|_my_array[0]]]
 	<<else>>
 	  <font color=green>(_my_array[2])</font>
@@ -561,13 +561,13 @@ Trail Stash
 
 :: StoryMenu [StoryMenu]
 
-<<set _labels to ['Completed areas <b>BLOCKED</b>. Click to unblock.', 'Completed areas <b>UNBLOCKED</b>. Click to block.']>>
-<<set _hm to _labels[Number($hardmode)]>>
+<<set _bumper_toggle_msg to ['Completed areas <b>BLOCKED</b>. Click to unblock.', 'Completed areas <b>UNBLOCKED</b>. Click to block.']>>
+<<set _hm to _bumper_toggle_msg[Number($hard_mode)]>>
 
-<<link "<span id='dif'>_hm</span>">>
-	<<set $hardmode to not $hardmode>>
-    <<set _hm to _labels[Number($hardmode)]>>
-	<<replace "#dif">>_hm<</replace>>
+<<link "<span id='hmopt'>_hm</span>">>
+	<<set $hard_mode to not $hard_mode>>
+    <<set _hm to _bumper_toggle_msg[Number($hard_mode)]>>
+	<<replace "#hmopt">>_hm<</replace>>
 <</link>>
 
 <<if not $metarooms.contains(passage())>><<set $oldpsg=passage()>><</if>>
