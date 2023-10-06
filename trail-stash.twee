@@ -20,7 +20,9 @@ Trail Stash
 <<set $inventory to []>>
 <<set $oldpsg to "">>
 <<set $useitem to "">>
+<<set $inner_items_used to 0>>
 <<set $total_map_pieces to 0>>
+<<set $itemorder to [ 'pert door', 'hair shirt', 'quick pest', 'hard candy', 'unpairable buns', 'funk pail', 'tech chip', 'spicy prune', 'tridents', 'booze cluster', 'grease pipe', 'dummy scoop', 'filed wire', 'wee freights', 'cheese on a cane', 'picky quill' ]>>
 <<set $metarooms to [ "Credits", "About", "Inventory", "Try (Ooh,) I? True!", "Game Map", "Treasure Map" ]>>
 
 /% center rooms %/
@@ -515,9 +517,14 @@ Trail Stash
 <<widget "showinventory">>
   <<if $inventory.length == 0>>You are carrying nothing.
   <<else>>
-    <<for _i = 0; _i < $inventory.length; _i++>>
-	  <<set $temp to $inventory[_i]>>
-	    <<usethis $temp>>
+    <<for _i = 0; _i < $itemorder.length; _i++>>
+	  <<if $inventory.contains($itemorder[_i])>>
+	    <<set $temp to $itemorder[_i]>>
+        <<usethis $temp>>
+	  <</if>>
+	  <<if _i is 4 and $inner_items_used < 4 and $total_map_pieces > 0>>
+        <hr />
+      <</if>>
 	<</for>>
   <</if>>
   <br />You currently have $total_map_pieces of 12 total map pieces.
