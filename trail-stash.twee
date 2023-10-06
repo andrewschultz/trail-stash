@@ -509,7 +509,7 @@ Trail Stash
 <</widget>>
 
 <<widget "usethis">>
-  $args[0]: [[USE THIS|Try (Ooh,) I? True!][$useitem to $args[0]]]<br />
+  [[(USE THIS)|Try (Ooh,) I? True!][$useitem to $args[0]]]: $args[0]<<if $brief_mode is false>> (found in <<outsides $itemInfo[$args[0]].initroom>>)<</if>><br />
 <</widget>>
 
 <<widget "showinventory">>
@@ -521,11 +521,17 @@ Trail Stash
 	<</for>>
   <</if>>
   <br />You currently have $total_map_pieces of 12 total map pieces.
+  <<if Object.keys($roomInfo).contains($oldpsg) and $roomInfo[$oldpsg].solved>>
+  <br />You seem to have set things straight here, though, so no need to use anything further.
+  <</if>>
 <</widget>>
 
 <<widget "usewidget">>
-  <<if $itemInfo[$useitem].useroom == $oldpsg>>
+  <<if $roomInfo[$oldpsg].solved>>
+  No, you already set things right here.
+  <<elseif $itemInfo[$useitem].useroom == $oldpsg>>
   <<print $itemInfo[$useitem].success>>
+  <<set $itemInfo[$useitem].used to true>>
   <<set $roomInfo[$itemInfo[$useitem].useroom].solved to true>>
   <<set $thisroom=$itemInfo[$useitem].reveals>>
   <<for $temp = 0; $temp < $thisroom.length; $temp++>>
@@ -539,14 +545,26 @@ Trail Stash
     <<set $total_map_pieces += 1>>
 	You now have $total_map_pieces of 12 total map pieces!
     <<if $total_map_pieces == 12>>
-	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there.
+	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there. (Work your way through, or see it spoiled on the next screen.)
+    <p><center><img src = "trail-stash-treas-full.png"></center></p>
 	<<run $roomInfo[$oldpsg].exits.push(['Bay Hut', "'Mid daze, did maze...", '(final location)'])>>
 	<<run $roomInfo['Bay Hut'].exits.push([$oldpsg, 'no way back', '(Walk back? Balk! Wack!)'])>>
 	<<set $roomInfo['Bay Hut'].available = true>>
     <</if>>
+  <<else>>
+    <<set $inner_items_used += 1>>
+    <<if $inner_items_used == 4>>
+	  It looks like you've opened things up beyond the initial ring you could travel. There don't seem to be any more hidden passages. Progress!
+	<</if>>
   <</if>>
   <<elseif $itemInfo[$useitem].initroom == $oldpsg>>
   Hmm. You'd be surprised if you could use the $useitem right where you found it. You suspect someone already tried that. Somewhere else, maybe?
+  <<elseif ($roomInfo[$oldpsg].area == 0) and $roomInfo[$itemInfo[$useitem].initroom].area != 0>>
+  Hmm, no, from experience, stuff you found in the inner ring can open passages out.
+  <<elseif ($roomInfo[$oldpsg].area != 0) and $roomInfo[$itemInfo[$useitem].initroom].area == 0>>
+  Hmm, no, you found the $useitem in the inner ring. Perhaps it can help open some passages you haven't seen yet.
+  <<elseif $roomInfo[$oldpsg].area > 0 and $roomInfo[$itemInfo[$useitem].initroom].area != 0 and $roomInfo[$oldpsg].area != $roomInfo[$itemInfo[$useitem].initroom].area>>
+  Hmm. You found the $useitem just around the corner in $roomInfo[$itemInfo[$useitem].initroom]. It wouldn't be a treasure hunt if you had to do that little legwork! On the other hand, knowing this cuts down on possible wrong places to use the $useitem.
   <<else>>
   Unfortunately, you can't see any way to use the $useitem here. It must be useful somewhere, though! You hope so! You'd hate to have it weighing you down when you find the treasure!
   <</if>>
