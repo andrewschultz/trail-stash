@@ -491,7 +491,7 @@ Trail Stash
   <<elseif $metarooms.contains(_y)>>
     [[As you were|$oldpsg]]
   <<else>>
-  <font color=green>(This is a dead end/death trap--just undo in the left column!)</font>
+  <font color=orange>(This is a dead end/death trap--just undo in the left column!)</font>
   <</if>>
   </center>
 <</widget>>
@@ -519,6 +519,18 @@ Trail Stash
   [[(USE THIS)|Try (Ooh,) I? True!][$useitem to $args[0]]]: $args[0]<<if $brief_mode is false>> (found in <<outsides $itemInfo[$args[0]].initroom>>)<</if>><br />
 <</widget>>
 
+<<widget "map_pieces">>
+<<set $piececolor=grey>>
+<<if $piececolor < 3>><<set $piececolor=yellow>>
+<<elseif $piececolor < 6>><<set $piececolor=orange>>
+<<elseif $piececolor < 9>><<set $piececolor=purple>>
+<<elseif $piececolor < 12>><<set $piececolor=blue>>
+<</if>>
+<font color=$piececolor><b>$total_map_pieces of 12</b></font> total map pieces
+<</widget>>
+
+/% the coding for the HR relies on the items being in a specific order. %/
+
 <<widget "showinventory">>
   <<if $inventory.length == 0>>You are carrying nothing.
   <<else>>
@@ -532,7 +544,7 @@ Trail Stash
 	  <</if>>
 	<</for>>
   <</if>>
-  <br />You currently have $total_map_pieces of 12 total map pieces.
+  <br />You currently have <<map_pieces>>.
   <<if Object.keys($roomInfo).contains($oldpsg) and $roomInfo[$oldpsg].solved>>
   <br />You seem to have set things straight here, though, so no need to use anything further.
   <</if>>
@@ -572,7 +584,7 @@ Trail Stash
   <<run $inventory.delete($useitem)>>
   <<if $itemInfo[$useitem].map_piece>>
     <<set $total_map_pieces += 1>>
-	You now have $total_map_pieces of 12 total map pieces!
+	You now have <<map_pieces>>!
     <<if $total_map_pieces == 12>>
 	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there. (Work your way through, or see it spoiled on the next screen.)
 	<<run $roomInfo[$oldpsg].exits.push(['Bay Hut', "'Mid daze, did maze...", '(final location)'])>>
