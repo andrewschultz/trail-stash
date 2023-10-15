@@ -30,7 +30,7 @@ Trail Stash
 
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
-  exits: [ ['Small Isles', 'to some small isles', '(small isles solved)'], ['Cheering Voice', 'to a cheering voice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to the feeling diner', '(fixed feeling diner)'], ],
+  exits: [ ['Small Isles', 'to some small isles', '(small isles solved)'], ['Cheering Voice', 'to a cheering voice', '(opened the veering choice)'], ['Harming Fights', 'to harming fights', '(fixed the harming fights)'], ['Weedy Nerds', 'to some weedy nerds', '(fixed the weedy nerds)'], ['Feeling Diner', 'to a feeling diner', '(fixed feeling diner)'], ],
   todo: "A funny mound here seems to be blocking any passages elsewhere.",
   done: "With money found here, passages outward have expanded.",
   available: true,
@@ -41,7 +41,7 @@ Trail Stash
   }
 >>
 <<set $roomInfo['Small Isles'] to {
-  exits: [ ['Ganging Hate', 'near some ganging hate', '(ganging hate repelled)'], ['Funny Mound', 'to a funny mound', '(funny mound solved)'], ['Drunk Shore', 'to a drunk shore', '(drunk shore solved)'], ['Wash Pit', 'to the wash pit', '(cleaned up the wash pit)'], ['Feast Lake', 'to a feast lake', '(made feast lake nicer)'] ],
+  exits: [ ['Ganging Hate', 'near some ganging hate', '(ganging hate repelled)'], ['Funny Mound', 'to a funny mound', '(funny mound solved)'], ['Drunk Shore', 'to a drunk shore', '(drunk shore solved)'], ['Wash Pit', 'to a wash pit', '(cleaned up the wash pit)'], ['Feast Lake', 'to a feast lake', '(made feast lake nicer)'] ],
   todo: "In these small isles, people guess they seem content. They don't see any way to get less unhappy. Everything's as good as it can get, and it's okay, they guess.",
   done:	"Perhaps things aren't perfect here, but you boosted things nicely.",
   available: true,
@@ -314,7 +314,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "The weedy nerds have discarded a tech chip here.",
-  success: "The tech chip seems to be just the thing to get the yacking, hard to change subject. The yackers in question know just what to do with it. They had been talking about doing technical stuff for a while, but nobody ever pushed them to do anything. This chip is just what they need! As thanks, they give you a piece of the treasure map.",
+  success: "The tech chip seems to be just the thing to get the yacking, hard to change subject. The yackers in question know just what to do with it. They had been talking about doing technical stuff for a while, but nobody ever pushed them to do anything.<p />This chip is just what they need! As thanks, they give you a piece of the treasure map.",
   reveals: [ ]
 }
 >> /% 1-4 %/
@@ -328,7 +328,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "A spicy prune sits here untouched and not too dirty.",
-  success: "The spicy prune causes an upheaval of the usually tacit and boring Feeling Diner. Conversation had gotten too whiny. The patrons plan on doing a bit more. They look around for a way to give thanks. They have it--a piece of the map you need! The diner's a bit more lively, discussing not just problems but how to deal with them.",
+  success: "The spicy prune causes an upheaval of the usually tacit and boring Feeling Diner. Conversation had gotten too whiny. The patrons plan on doing a bit more. The diner's a bit more lively, discussing not just problems but how to deal with them.<p />They look around for a way to give thanks. They have it--a piece of the map you need!",
   reveals: [ ]
 }
 >> /% 2-1 %/
@@ -340,7 +340,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "A couple of tridents lie here, washed up from the deep, I guess. They look glowing and full of latent power. But that power will not come to fruition here.",
-  success: "You plant the tridents, and as they do, they grow to an enormous size. (Un)surprisingly, once you do, the animals uncover some dry tents and rope off to the side that were useless without anything to hold them up. A brief search reveals even more sticks and suck that support things. You are clueless with knots, but some animals some way, somehow, show you. Smart! They have a place to roam and see and be seen, in this open-range zoo.",
+  success: "You plant the tridents, and as they do, they grow to an enormous size. (Un)surprisingly, once you do, the animals uncover some dry tents and rope off to the side that were useless without anything to hold them up.<p />A brief search reveals even more sticks and suck that support things. You are clueless with knots, but some animals some way, somehow, show you. Smart! They have a place to roam and see and be seen, in this open-range zoo.",
   reveals: [ ]
 }
 >> /% 2-3 %/
@@ -352,7 +352,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "A booze cluster lies here. It seems very quantity-over-quality. Not that there's anything wrong with that.",
-  success: "The booze cluster seems to satisfy the rusty fiddlers. They discuss various things like how a raven is like a writing-desk, or how to fill a seven-gallon jug with a three- and five-gallon jug, and, indeed, what the general case is for when you can and can't do that, and how to do so in the optimum number of terms. Quite bluntly, you find it a bit boring, but they don't. They're so happy, in fact, they give you a map piece!",
+  success: "The booze cluster seems to satisfy the rusty fiddlers. They discuss various things like how a raven is like a writing-desk, or how to fill a seven-gallon jug with a three- and five-gallon jug, and, indeed, what the general case is for when you can and can't do that, and how to do so in the optimum number of terms.<p />Quite bluntly, you find it a bit boring, but they don't. They're so happy, in fact, they give you a map piece!",
   reveals: [ ]
 }
 >> /% 2-4 %/
@@ -366,7 +366,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "A grease pipe lies here, probably part of some trash thoughtlessly dumped.",
-  success: "You hand the grease pipes to each of the fighters. They are glad to have such strong looking weapons! They are so consumed with winning that you did not realize you gave one to their enemy. Nevertheless, when they try to actually wield the pipes, said pipes slip from their hands. They were already pretty tired of fighting, and after a while, they realize they just want peace, and they may just be destroying the land they are fighting over.",
+  success: "You hand the grease pipes to each of the fighters. They are glad to have such strong looking weapons! They are so consumed with winning that you did not realize you gave one to their enemy.<p />Nevertheless, when they try to actually wield the pipes, said pipes slip from their hands. They were already pretty tired of fighting, and after a while, they realize they just want peace, and they may just be destroying the land they are fighting over.",
   reveals: [ ]
 }
 >> /% 3-1 %/
@@ -378,7 +378,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "A dummy scoop lies here. Everyone seems to look down on it here, but it doesn't seem to be helping them much. All the (alleged) dummies, perhaps, have been scooped from such an advanced class.",
-  success: "The dummy scoop leaves the feasters horrified at first, but then they realize -- here is something even faker than they are! Obviously they have work to do to be themselves, but perhaps they were further along than they thought. They hand you a map piece.",
+  success: "The dummy scoop leaves the feasters horrified at first, but then they realize -- here is something even faker than they are!<p />Obviously they have work to do to be themselves, but perhaps they were further along than they thought. They hand you a map piece.",
   reveals: [ ]
 }
 >> /% 3-2 %/
@@ -404,7 +404,7 @@ Trail Stash
   used: false,
   map_piece: true,
   description: "Some wee freights lie here, a neat subject of conversation, but sadly these trains have no track or power of locomotion.",
-  success: "The weedy nerds are quickly very interested in the wee freights. The process of moving and organizing said freights gets longer. They analyze the structure of the freights and build bigger ones. All this is a good workout--something the weedy nerds once avoided. Yet they seemed refreshed by it all. They are shocked to find exercise has cleared their mind and helped them focus on some goals and achieve others! A good bout of exercise also opens their minds to more subjective things, not just technical creations and such. They give you a piece of map for helping them realize this.",
+  success: "The weedy nerds are quickly very interested in the wee freights, be they ships or trains. The process of moving and organizing said freights gets longer. They analyze the structure of the freights and build bigger ones. All this is a good workout--something the weedy nerds once avoided.<p /> Yet they seemed refreshed by it all. They are shocked to find exercise has cleared their mind and helped them focus on some goals and achieve others! A good bout of exercise also opens their minds to more subjective things, not just technical creations and such. They give you a piece of map for helping them realize this.",
   reveals: [ ]
 }
 >> /% 4-1 %/
@@ -435,7 +435,6 @@ Trail Stash
 
 <<set $hard_mode to false>>
 <<set $brief_mode to false>>
-
 
 :: Story Widgets [widget nobr]
 <<widget "thispassage">>
@@ -586,7 +585,7 @@ Trail Stash
     <<set $total_map_pieces += 1>>
 	You now have <<map_pieces>>!
     <<if $total_map_pieces == 12>>
-	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there. (Work your way through, or see it spoiled on the next screen.)
+	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there.
 	<<run $roomInfo[$oldpsg].exits.push(['Bay Hut', "'Mid daze, did maze...", '(final location)'])>>
 	<<run $roomInfo['Bay Hut'].exits.push([$oldpsg, 'no way back', '(Walk back? Balk! Wack!)'])>>
 	<<set $roomInfo['Bay Hut'].available = true>>
@@ -598,7 +597,7 @@ Trail Stash
 	<</if>>
   <</if>>
   <<elseif $itemInfo[$useitem].initroom == $oldpsg>>
-  Hmm. You'd be surprised if you could use the $useitem right where you found it. You suspect someone already tried that. Somewhere else, maybe?
+  Hmm. You'd be surprised if you could use the $useitem right where you found it. You suspect someone, treasure hunter or no, would've already tried that. Somewhere else, maybe?
   <<elseif ($roomInfo[$oldpsg].area == 0) and $roomInfo[$itemInfo[$useitem].initroom].area != 0>>
   Hmm, no, from experience, stuff you found in the inner ring can open passages out.
   <<elseif ($roomInfo[$oldpsg].area != 0) and $roomInfo[$itemInfo[$useitem].initroom].area == 0>>
@@ -606,7 +605,7 @@ Trail Stash
   <<elseif $roomInfo[$oldpsg].area > 0 and $roomInfo[$itemInfo[$useitem].initroom].area != 0 and $roomInfo[$oldpsg].area != $roomInfo[$itemInfo[$useitem].initroom].area>>
   Hmm. You found the $useitem just around the corner in $roomInfo[$itemInfo[$useitem].initroom]. It wouldn't be a treasure hunt if you had to do that little legwork! On the other hand, knowing this cuts down on possible wrong places to use the $useitem.
   <<else>>
-  Unfortunately, you can't see any way to use the $useitem here. It must be useful somewhere, though! You hope so! You'd hate to have it weighing you down when you find the treasure!
+  Unfortunately, you can't see any way to use the $useitem here.<p />It must be useful somewhere, though! You hope so! You'd hate to have it weighing you down when you find the treasure!
   <</if>>
 <</widget>>
 
@@ -662,13 +661,15 @@ The creative part for <i>Trail Stash</i> started a long while ago, when I starte
 
 With Twine, though, hopefully the double meanings will provide chuckles before things get too, um, stale. I needed ones that roughly made sense and matched each way they were flipped. I hope you enjoy the result and it encourages you to try your own odd experiments.
 
+Also, just for laughs, the original title was "Biddings Quest." That requires some creative pronunciation to make a spoonerism, but I hope you like it.
+
 :: Credits
 
 Specific thanks:
 
 Thanks to Felicity Banks for very helpful testing very near to the IFComp deadline. How near? So near, I forgot to credit her in the original comp version, which I feel really bad about. (I had this suspicion I was forgetting something!) Go play <i>Bali B&B</i>, her entry in the 2023 IFComp.
 
-Thanks to Noah Xi for suggesting an actual in-game graphical map since I, well, talked about collecting map pieces.
+Thanks to Noah Si for suggesting an actual in-game graphical map since I, well, talked about collecting map pieces.
 
 Thanks to Joey Jones for the poke to, well, open up my GitHub repo, which also tipped off a useful feature I'd half-forgotten about. He's written/co-written several neat things, including for Choice of Games. <i>Sub Rosa</i> is his most recent parser effort.
 
