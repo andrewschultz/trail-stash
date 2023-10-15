@@ -519,13 +519,14 @@ Trail Stash
 <</widget>>
 
 <<widget "map_pieces">>
-<<set $piececolor=grey>>
-<<if $piececolor < 3>><<set $piececolor=yellow>>
-<<elseif $piececolor < 6>><<set $piececolor=orange>>
-<<elseif $piececolor < 9>><<set $piececolor=purple>>
-<<elseif $piececolor < 12>><<set $piececolor=blue>>
+<<if $total_map_pieces == 0>><<set $piececolor="gray">>
+<<elseif $total_map_pieces < 3>><<set $piececolor="yellow">>
+<<elseif $total_map_pieces < 6>><<set $piececolor="orange">>
+<<elseif $total_map_pieces < 9>><<set $piececolor="purple">>
+<<elseif $total_map_pieces < 12>><<set $piececolor="blue">>
+<<else>><<set $piececolor="green">>
 <</if>>
-<font color=$piececolor><b>$total_map_pieces of 12</b></font> total map pieces
+<font @color="$piececolor"><b>$total_map_pieces of 12</b></font> total map
 <</widget>>
 
 /% the coding for the HR relies on the items being in a specific order. %/
@@ -543,7 +544,7 @@ Trail Stash
 	  <</if>>
 	<</for>>
   <</if>>
-  <br />You currently have <<map_pieces>>.
+  <br />You currently have <<map_pieces>> pieces.
   <<if Object.keys($roomInfo).contains($oldpsg) and $roomInfo[$oldpsg].solved>>
   <br />You seem to have set things straight here, though, so no need to use anything further.
   <</if>>
@@ -583,7 +584,7 @@ Trail Stash
   <<run $inventory.delete($useitem)>>
   <<if $itemInfo[$useitem].map_piece>>
     <<set $total_map_pieces += 1>>
-	You now have <<map_pieces>>!
+	You now have <<map_pieces>> pieces!
     <<if $total_map_pieces == 12>>
 	You fit them all together. You see the Bay Hut and the maze that leads you through. It's time to go there.
 	<<run $roomInfo[$oldpsg].exits.push(['Bay Hut', "'Mid daze, did maze...", '(final location)'])>>
