@@ -26,7 +26,7 @@ Trail Stash
 <<set $metarooms to [ "Credits", "About", "Inventory", "Try (Ooh,) I? True!", "Game Map", "Treasure Map" ]>>
 <<set $begin_rooms to [ "Growing Need, Knowing Greed", "Weak Cell" ]>>
 <<set $end_rooms to [ 'Bay Hut', 'Wrong Leads' ]>>
-
+<<set $inside_rooms to [ "Funny Mound", "Small Isles", "Ganging Hate", "Cheering Voice" ]>>
 
 /% center rooms %/
 <<set $roomInfo['Funny Mound'] to {
@@ -532,11 +532,26 @@ Trail Stash
 /% the coding for the HR relies on the items being in a specific order. %/
 
 <<widget "showinventory">>
+  <<set $have_inside = false>>
+  <<set $have_outside = false>>
+  <<for _i = 0; _i < $itemorder.length; _i++>>
+    <<if $inventory.contains($itemorder[_i])>>
+	  <<if _i > 4>>
+	    <<set $have_outside = true>>
+	  <<else>>
+	    <<set $have_inside = true>>
+	  <</if>>
+    <</if>>
+  <</for>>
+  <<set $add_typographical to ($have_outside and $have_inside)>>
+  <<if $add_typographical>>
+    Found in inner ring:<br />
+  <</if>>
   <<if $inventory.length == 0>>You are carrying nothing.
   <<else>>
     <<for _i = 0; _i < $itemorder.length; _i++>>
-	  <<if _i is 4 and $inner_items_used < 4 and $total_map_pieces > 0>>
-        <hr />
+	  <<if _i is 4 and $add_typographical>>
+        <hr />Found in outer ring:<br />
       <</if>>
 	  <<if $inventory.contains($itemorder[_i])>>
 	    <<set $temp to $itemorder[_i]>>
@@ -549,8 +564,10 @@ Trail Stash
   <br />You seem to have set things straight here, though, so no need to use anything further.
   <</if>>
   <<if $brief_mode is false>>
+    <<set $break_yet to false>>
     <<for _j = 0; _j < $itemorder.length; _j++>>
       <<if $itemInfo[$itemorder[_j]].used is true and (_j > 4 or $inner_items_used < 4)>>
+	    <<if not $break_yet>><br /><<set $break_yet to true>><</if>>
         <br />You found the $itemorder[_j] in <<print $itemInfo[$itemorder[_j]].initroom>>, successfully used <<if $itemInfo[$itemorder[_j]].useroom is $oldpsg>>here<<else>>in <<print $itemInfo[$itemorder[_j]].useroom>><</if>>.
       <</if>>
     <</for>>
@@ -603,8 +620,8 @@ Trail Stash
   Hmm, no, from experience, stuff you found in the inner ring can open passages out.
   <<elseif ($roomInfo[$oldpsg].area != 0) and $roomInfo[$itemInfo[$useitem].initroom].area == 0>>
   Hmm, no, you found the $useitem in the inner ring. Perhaps it can help open some passages you haven't seen yet.
-  <<elseif $roomInfo[$oldpsg].area > 0 and $roomInfo[$itemInfo[$useitem].initroom].area != 0 and $roomInfo[$oldpsg].area != $roomInfo[$itemInfo[$useitem].initroom].area>>
-  Hmm. You found the $useitem just around the corner in $roomInfo[$itemInfo[$useitem].initroom]. It wouldn't be a treasure hunt if you had to do that little legwork! On the other hand, knowing this cuts down on possible wrong places to use the $useitem.
+  <<elseif $roomInfo[$oldpsg].area > 0 and $roomInfo[$itemInfo[$useitem].initroom].area != 0 and $roomInfo[$oldpsg].area == $roomInfo[$itemInfo[$useitem].initroom].area>>
+  Hmm. You found the $useitem just around the corner in <<print $itemInfo[$useitem].initroom>>. It wouldn't be a properly rigorous treasure hunt if you had that little legwork to do!<p />A bummer, having to walk extra, but on the other hand, knowing this cuts down on possible wrong places to use the $useitem.
   <<else>>
   Unfortunately, you can't see any way to use the $useitem here.<p />It must be useful somewhere, though! You hope so! You'd hate to have it weighing you down when you find the treasure!
   <</if>>
